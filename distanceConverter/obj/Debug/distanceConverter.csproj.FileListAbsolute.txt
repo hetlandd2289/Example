@@ -1,0 +1,10 @@
+C:\Users\hetlandd2289\source\repos\distanceConverter\bin\Debug\distanceConverter.exe.config
+C:\Users\hetlandd2289\source\repos\distanceConverter\bin\Debug\distanceConverter.exe
+C:\Users\hetlandd2289\source\repos\distanceConverter\bin\Debug\distanceConverter.pdb
+C:\Users\hetlandd2289\source\repos\distanceConverter\obj\Debug\distanceConverter.csprojAssemblyReference.cache
+C:\Users\hetlandd2289\source\repos\distanceConverter\obj\Debug\distanceConverter.distanceConverter.resources
+C:\Users\hetlandd2289\source\repos\distanceConverter\obj\Debug\distanceConverter.Properties.Resources.resources
+C:\Users\hetlandd2289\source\repos\distanceConverter\obj\Debug\distanceConverter.csproj.GenerateResource.cache
+C:\Users\hetlandd2289\source\repos\distanceConverter\obj\Debug\distanceConverter.csproj.CoreCompileInputs.cache
+C:\Users\hetlandd2289\source\repos\distanceConverter\obj\Debug\distanceConverter.exe
+C:\Users\hetlandd2289\source\repos\distanceConverter\obj\Debug\distanceConverter.pdb

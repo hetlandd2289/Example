@@ -1,0 +1,10 @@
+C:\Users\hetlandd2289\source\repos\CtoFConverter\bin\Debug\CtoFConverter.exe.config
+C:\Users\hetlandd2289\source\repos\CtoFConverter\bin\Debug\CtoFConverter.exe
+C:\Users\hetlandd2289\source\repos\CtoFConverter\bin\Debug\CtoFConverter.pdb
+C:\Users\hetlandd2289\source\repos\CtoFConverter\obj\Debug\CtoFConverter.csprojAssemblyReference.cache
+C:\Users\hetlandd2289\source\repos\CtoFConverter\obj\Debug\CtoFConverter.tempConverter.resources
+C:\Users\hetlandd2289\source\repos\CtoFConverter\obj\Debug\CtoFConverter.Properties.Resources.resources
+C:\Users\hetlandd2289\source\repos\CtoFConverter\obj\Debug\CtoFConverter.csproj.GenerateResource.cache
+C:\Users\hetlandd2289\source\repos\CtoFConverter\obj\Debug\CtoFConverter.csproj.CoreCompileInputs.cache
+C:\Users\hetlandd2289\source\repos\CtoFConverter\obj\Debug\CtoFConverter.exe
+C:\Users\hetlandd2289\source\repos\CtoFConverter\obj\Debug\CtoFConverter.pdb

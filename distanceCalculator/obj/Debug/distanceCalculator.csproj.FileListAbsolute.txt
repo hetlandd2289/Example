@@ -1,0 +1,10 @@
+C:\Users\hetlandd2289\source\repos\distanceCalculator\bin\Debug\distanceCalculator.exe.config
+C:\Users\hetlandd2289\source\repos\distanceCalculator\bin\Debug\distanceCalculator.exe
+C:\Users\hetlandd2289\source\repos\distanceCalculator\bin\Debug\distanceCalculator.pdb
+C:\Users\hetlandd2289\source\repos\distanceCalculator\obj\Debug\distanceCalculator.csprojAssemblyReference.cache
+C:\Users\hetlandd2289\source\repos\distanceCalculator\obj\Debug\distanceCalculator.distanceCalculator.resources
+C:\Users\hetlandd2289\source\repos\distanceCalculator\obj\Debug\distanceCalculator.Properties.Resources.resources
+C:\Users\hetlandd2289\source\repos\distanceCalculator\obj\Debug\distanceCalculator.csproj.GenerateResource.cache
+C:\Users\hetlandd2289\source\repos\distanceCalculator\obj\Debug\distanceCalculator.csproj.CoreCompileInputs.cache
+C:\Users\hetlandd2289\source\repos\distanceCalculator\obj\Debug\distanceCalculator.exe
+C:\Users\hetlandd2289\source\repos\distanceCalculator\obj\Debug\distanceCalculator.pdb
