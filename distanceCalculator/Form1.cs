@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace distanceCalculator
@@ -27,11 +28,48 @@ namespace distanceCalculator
             int.TryParse(speedTextBox.Text, out speed);
             int.TryParse(hoursTextBox.Text, out hours);
 
-            while (++count <= hours)
+            //
+            StreamWriter outFile;
+
+            if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                resultsListBox.Items.Add("After hour " + count.ToString() + " the distance is " + (speed * count).ToString());
-                //count++;
+                outFile = File.CreateText(saveFile.FileName); //Open
+
+                while (++count <= hours) //Process
+                 {
+                    resultsListBox.Items.Add("After hour " + count.ToString() + " the distance is " + (speed * count).ToString());
+                     //count++;
+                 }
+
+                outFile.Close(); //Close
             }
+            else
+            {
+                MessageBox.Show("Selection Canceled");
+            }
+
+            StreamReader inFile;
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                inFile = File.OpenText(openFile.FileName); //Open
+
+                while (!inFile.EndOfStream) //Process
+                {
+                    resultsListBox.Items.Add(inFile.ReadLine());
+                    //count++;
+                }
+
+                inFile.Close(); //Close
+            }
+            else
+            {
+                MessageBox.Show("Selection Canceled");
+            }
+
+
+
+
         }
 
         private void exitButton_Click(object sender, EventArgs e)

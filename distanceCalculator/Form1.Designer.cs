@@ -35,6 +35,8 @@
             this.hoursLabel = new System.Windows.Forms.Label();
             this.speedTextBox = new System.Windows.Forms.TextBox();
             this.hoursTextBox = new System.Windows.Forms.TextBox();
+            this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.saveFile = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // resultsListBox
@@ -97,6 +99,14 @@
             this.hoursTextBox.Size = new System.Drawing.Size(100, 20);
             this.hoursTextBox.TabIndex = 6;
             // 
+            // openFile
+            // 
+            this.openFile.FileName = "openFileDialog1";
+            // 
+            // saveFile
+            // 
+            this.saveFile.FileName = "openFileDialog1";
+            // 
             // distanceCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +135,8 @@
         private System.Windows.Forms.Label hoursLabel;
         private System.Windows.Forms.TextBox speedTextBox;
         private System.Windows.Forms.TextBox hoursTextBox;
+        private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.OpenFileDialog saveFile;
     }
 }
 
