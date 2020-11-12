@@ -35,11 +35,11 @@ namespace distanceCalculator
             {
                 outFile = File.CreateText(saveFile.FileName); //Open
 
-                while (++count <= hours) //Process
-                 {
-                    resultsListBox.Items.Add("After hour " + count.ToString() + " the distance is " + (speed * count).ToString());
-                     //count++;
-                 }
+                do  //Process
+                {
+                    outFile.WriteLine("After hour " + count.ToString() + " the distance is " + (speed * count).ToString());
+                    count++;
+                } while (count <= hours);
 
                 outFile.Close(); //Close
             }
@@ -47,6 +47,17 @@ namespace distanceCalculator
             {
                 MessageBox.Show("Selection Canceled");
             }
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void readButton_Click(object sender, EventArgs e)
+        {
+            resultsListBox.Items.Clear();
 
             StreamReader inFile;
 
@@ -66,15 +77,6 @@ namespace distanceCalculator
             {
                 MessageBox.Show("Selection Canceled");
             }
-
-
-
-
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

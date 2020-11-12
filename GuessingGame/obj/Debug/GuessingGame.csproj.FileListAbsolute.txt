@@ -1,0 +1,10 @@
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\bin\Debug\GuessingGame.exe.config
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\bin\Debug\GuessingGame.exe
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\bin\Debug\GuessingGame.pdb
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\obj\Debug\GuessingGame.csprojAssemblyReference.cache
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\obj\Debug\GuessingGame.blindMansBluff.resources
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\obj\Debug\GuessingGame.Properties.Resources.resources
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\obj\Debug\GuessingGame.csproj.GenerateResource.cache
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\obj\Debug\GuessingGame.csproj.CoreCompileInputs.cache
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\obj\Debug\GuessingGame.exe
+C:\Users\hetlandd2289\GitHub\Example\GuessingGame\obj\Debug\GuessingGame.pdb
