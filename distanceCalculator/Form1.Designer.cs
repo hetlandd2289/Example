@@ -35,6 +35,9 @@
             this.hoursLabel = new System.Windows.Forms.Label();
             this.speedTextBox = new System.Windows.Forms.TextBox();
             this.hoursTextBox = new System.Windows.Forms.TextBox();
+            this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.saveFile = new System.Windows.Forms.SaveFileDialog();
+            this.readButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // resultsListBox
@@ -47,17 +50,17 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(14, 188);
+            this.calculateButton.Location = new System.Drawing.Point(11, 188);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(75, 23);
             this.calculateButton.TabIndex = 1;
-            this.calculateButton.Text = "Calculate";
+            this.calculateButton.Text = "Write";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(159, 188);
+            this.exitButton.Location = new System.Drawing.Point(166, 188);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 2;
@@ -97,11 +100,26 @@
             this.hoursTextBox.Size = new System.Drawing.Size(100, 20);
             this.hoursTextBox.TabIndex = 6;
             // 
+            // openFile
+            // 
+            this.openFile.FileName = "openFileDialog1";
+            // 
+            // readButton
+            // 
+            this.readButton.Location = new System.Drawing.Point(92, 188);
+            this.readButton.Name = "readButton";
+            this.readButton.Size = new System.Drawing.Size(68, 23);
+            this.readButton.TabIndex = 7;
+            this.readButton.Text = "Read";
+            this.readButton.UseVisualStyleBackColor = true;
+            this.readButton.Click += new System.EventHandler(this.readButton_Click);
+            // 
             // distanceCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(253, 227);
+            this.Controls.Add(this.readButton);
             this.Controls.Add(this.hoursTextBox);
             this.Controls.Add(this.speedTextBox);
             this.Controls.Add(this.hoursLabel);
@@ -125,6 +143,9 @@
         private System.Windows.Forms.Label hoursLabel;
         private System.Windows.Forms.TextBox speedTextBox;
         private System.Windows.Forms.TextBox hoursTextBox;
+        private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.SaveFileDialog saveFile;
+        private System.Windows.Forms.Button readButton;
     }
 }
 
