@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86BDB5D9-0827-4876-9AB4-862444793F45}</ProjectGuid>
+    <ProjectGuid>{22FF5B3C-3AC8-48E4-B304-EA60E71F151B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>exam3Practical</RootNamespace>
-    <AssemblyName>exam3Practical</AssemblyName>
+    <RootNamespace>joesAutomotive</RootNamespace>
+    <AssemblyName>joesAutomotive</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
