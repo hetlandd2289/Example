@@ -64,5 +64,80 @@ namespace joesAutomotive
             ClearOther();
             ClearFees();
         }
+
+        private double oilLubeCharges()
+        {
+            double total = 0;
+            if (oilChangeCheckBox.Checked == true)
+                total += 26.00;
+            if (lubeJobCheckBox.Checked == true)
+                total += 18.00;
+
+            return total; //Value-Returning. If this is not here, an error is thrown
+        }
+
+        private double flushCharges()
+        {
+            double total = 0;
+            if (radiatorFlushCheckBox.Checked == true)
+                total += 30.00;
+            if (transmissionFlushCheckBox.Checked == true)
+                total += 80.00;
+
+            return total;
+        }
+
+        private double miscCharges()
+        {
+            double total = 0;
+            if (inspectionCheckBox.Checked == true)
+                total += 15.00;
+            if (replaceMufflerCheckBox.Checked == true)
+                total += 100.00;
+            if (tireRotationCheckBox.Checked == true)
+                total += 20.00;
+
+            return total;
+        }
+
+        private double laborCharges()
+        {
+            
+            double labor = 0;
+            double.TryParse(laborTextBox.Text, out labor);
+
+            return labor;
+        }
+
+        private double partsCharges()
+        {
+            double parts = 0;
+
+            double.TryParse(partsTextBox.Text, out parts);
+
+            return parts;
+        }
+
+        private double taxCharges()
+        {
+            double parts = 0;
+
+            double.TryParse(partsTextBox.Text, out parts);
+
+            return parts * 0.06;
+        }
+
+        private double totalCharges()
+        {
+            return oilLubeCharges() + flushCharges() + miscCharges() + laborCharges() + partsCharges() + taxCharges();
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            serviceTextBox.Text = (oilLubeCharges() + flushCharges() + miscCharges() + laborCharges()).ToString();
+            partsSummaryTextBox.Text = (partsCharges()).ToString();
+            taxTextBox.Text = (taxCharges()).ToString();
+            totalTextBox.Text = totalCharges().ToString();
+        }
     }
 }
