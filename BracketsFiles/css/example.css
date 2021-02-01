@@ -1,7 +1,19 @@
+/*
+Auth: Drake Hetland
+Date: 1/28/2021
+Desc: This is the css example file
+*/
 body {
                 color: #010101;
                 background-color: #ABABAB;
+                
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                    
+    
             }
             p{
                 color: darkcyan;
             }
+#lists ul {color:darkblue;}
