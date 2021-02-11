@@ -17,3 +17,14 @@ body {
                 color: darkcyan;
             }
 #lists ul {color:darkblue;}
+
+#list {
+    border-bottom: 3px dashed blue;
+    border-top: 4px dotted darkorange;
+    border-left: 6px solid magenta;
+    border-right: 30px outset hotpink;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-left: 200px;
+    padding-right: 15px;
+}
