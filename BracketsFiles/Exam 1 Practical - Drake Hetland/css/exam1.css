@@ -1,0 +1,29 @@
+/*
+Auth: Drake Hetland
+Date: 2/9/2021
+Desc: Stylesheet for Calhoons Construction Company
+*/
+body {
+        /* Sets text color for all pages connected. */
+                color: #256E7A;
+    
+        /* Sets background color for all pages connected. */
+                background-color: #4BE0FB;
+                
+        /* Sets left and right margins for all pages conneceted. */
+                margin-left: auto;
+                margin-right: auto;
+                
+        /* Sets width of page for all pages connected. */
+                width: 80%;
+              
+        /* Sets font-families for all pages connected. */
+                font-family: Arial, sans-serif;
+                
+            }
+
+
+dl{
+        /* Sets a new color for all sescription lists in connected pages. */
+                color: #00677A
+            }

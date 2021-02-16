@@ -1,16 +1,35 @@
+<!-- 
+Auth: Drake Hetland
+Date: 2/1/2021
+Desc: Favorites page of my personal website
+-->
 <!DOCTYPE html>
 <html lang="en">
     <!-- Meta info -->
     <head>
         <title>Drake Hetland</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/personalWebsite.css">
+        <script></script>
+        <style>
+            
+            blockquote {color: #801515;}
+        
+            .lists {
+                    color: #0D4D4D
+                    }
+            
+            #headers {
+                      color:navy
+                      }
+        </style>
     </head>
     
     <!-- Body tag -->
     <body>
         <!-- Main header used for page -->
         <header> 
-            <h1>Favorites</h1>
+            <h1 id="main">Favorites</h1>
         </header>
         
         <!-- Nav tag -->
@@ -25,7 +44,7 @@
         <!-- Header for "Quotes" portion of page, smaller font than main header -->
         <main>
             <header>
-                <h3>Quotes</h3>
+                <h3 id="headers">Quotes</h3>
             </header>
         
         <!-- Blockquote tags -->
@@ -42,7 +61,7 @@
             Great moments are born from great opportunity.<br>
             And thats what you have here tonight, boys.<br>
             That's what you've earned here tonight.<br>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Herb Brooks</b>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>Herb Brooks</strong>
         </blockquote>
         
         
@@ -55,10 +74,10 @@
             
         <!-- "Movies" header -->
         <header>
-            <h3>Movies</h3>
+            <h3 id="headers">Movies</h3>
         </header>
         <!-- Ordered list tag -->
-        <ol>
+        <ol class="lists">
             <li><i>Logan</i> - 2017</li>
             <li><i>Oblivion</i> - 2013</li>
             <li><i>Interstellar</i> - 2014</li>
@@ -68,10 +87,10 @@
             
         <!-- "Bucket List" header -->
         <header>
-            <h3>Bucket List</h3>
+            <h3 id="headers">Bucket List</h3>
         </header>
         <!-- Unordered list tag -->
-        <ul>
+        <ul class="lists">
             <li>Visit my friends I made online in Idaho and Washington state</li>
             <li>Buy a gun</li>
             <li>Go to a shooting range with my uncles</li>
@@ -81,24 +100,24 @@
             
         <!-- "Words" header -->
         <header>
-            <h3>Words</h3>
+            <h3 id="headers">Words</h3>
         </header>
         <!-- Description list tag -->
-        <dl>
-            <dt>Tragic</dt>
+        <dl class="lists">
+            <dt><b>Tragic</b></dt>
                 <dd>Causing extreme distress or sorrow</dd>
-            <dt>Bizarre</dt>
+            <dt><b>Bizarre</b></dt>
                 <dd>Very strange or unusual, especially so as to cause interest or amusement</dd>
-            <dt>Fascinate</dt>
+            <dt><b>Fascinate</b></dt>
                 <dd>Draw irresistibly the attention and interest of</dd>
         </dl>
             
         <!-- "Websites" header -->
         <header>
-            <h3>Websites</h3>
+            <h3 id="headers">Websites</h3>
         </header>
             <!-- Links to external pages -->
-            <p>
+            <p class="lists">
                 <a href="https://www.youtube.com/" target="_blank">YouTube</a><br>
                 <a href="https://www.crunchyroll.com" target="_blank">Crunchyroll</a><br>
                 <a href="https://www.ifunny.co" target="_blank">iFunny</a><br>
