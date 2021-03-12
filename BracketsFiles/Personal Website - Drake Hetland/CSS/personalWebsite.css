@@ -2,10 +2,14 @@
 Auth: Drake Hetland
 Date: 2/1/2021
 Desc: Stylesheet for my personal website
+Colors used: #02E0FF, #1E3234, #00FFAB, #0DAD79, #213931 I chose these colors because they are easy on the eye, and could be arranged
+into a dark theme. They are also eye catching and interesting, all things that my target audience of young adults are interested in.
+I also used #000 and #AAA on the art page to make the images and text there stand out from the background image.
+Color scheme: Analogous. Art page differs because of the background image.
 */
 body {
-                color: #010101;
-                background-color: #D4EE9F;
+                color: #02E0FF;
+                background-color: #1E3234;
                 
                 margin-left: auto;
                 margin-right: auto;
@@ -20,9 +24,10 @@ nav {
     font-size: 110%
 }
             
+/* Same colors for types of text for repetition and contrast. */
 p{
-    color: #0D4D4D;
+    color: #02E0FF;
     }
 #main {
-    color: #004400
+    color: #00FFAB
 }
