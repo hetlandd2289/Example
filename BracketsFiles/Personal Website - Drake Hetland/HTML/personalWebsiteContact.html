@@ -1,6 +1,7 @@
 <!-- 
 Auth: Drake Hetland
 Date: 2/1/2021
+Edit: 4/13/2021
 Desc: Contact page of my personal website
 Icon by freezinghot at https://www.teepublic.com/user/freezinghot
 -->
@@ -10,42 +11,159 @@ Icon by freezinghot at https://www.teepublic.com/user/freezinghot
     <head>
         <title>Drake Hetland</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/personalWebsite.css">
+        <link rel="stylesheet" href="../css/personalWebsite.css"
+              media=(max-device-width:3440px)>
+        <link rel="stylesheet" href="../CSS/personalWebsiteMobile.css"
+              media="(max-device-width:480px)">
+        <link rel="stylesheet" href="../CSS/personalWebsiteSmall.css"
+              media="(max-device-width:1024px)">
+        <link rel="stylesheet" href="../CSS/personalWebsiteMedium.css"
+              media=(max-device-width:1440px)>
+        <link rel="stylesheet" href="../CSS/personalWebsiteLarge.css"
+              media=(max-device-width:1920px)>
+        
         <link rel="icon" href="../Images/MHWLogo.jfif" type="image/x-icon">
         <script></script>
         <style></style>
     </head>
     
-    <body>
-        <!-- Main header for page -->
-        <header> 
-            <h1 id="main">Contact</h1>
-        </header>
-        
-        <!-- Nav tag -->
-        <nav>
-            <ul style="background-color: #0E939F; padding-left: 10px; padding-bottom: 5px; padding-top: 5px;
-                                    border-style: solid; border-color: #213931; width: 80px">
-                <li><a href="personalWebsite.html">Home</a></li>
-                <li><a href="personalWebsiteFavorites.html">Favorites</a></li>
-                <li><a href="personalWebsiteContact.html">Contact</a></li>
-                <li><a href="personalWebsiteArt.html">Art</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Links to my email addresses -->
-        <main>
-            <p>
-                Contact my school e-mail <a href="mailto:hetlandd2289@iowalakes.edu" target="_blank">here</a>
-            </p>
-            <p>
-                Contact my personal e-mail <a href="mailto:drakehetland@gmail.com" target="_blank">here</a>
-            </p>
-        </main>
-        
-        <!-- Footer tag -->
-        <footer>
-            <p><small>Drake Hetland Personal Website 2021</small></p>
-        </footer>
+    <!-- Sets up the id for body tag on this page. Used on mobile css -->
+    <body id="contactBody">
+        <!-- Created new wrapper tag to format page into a, albiet scuffed, 3 columm layout. -->
+        <span id="formWrapper">
+            <!-- Main header for page -->
+            <header id="h1"> 
+                <h1>Contact</h1>
+            </header>
+
+            <!-- Nav tag -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="personalWebsite.html">Home</a></li>
+                    <li><a href="personalWebsiteFavorites.html">Favorites</a></li>
+                    <li><a href="personalWebsiteContact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main tag holds the bulk of what is happening on page. -->
+            <main id="main">
+                
+                <!-- Header for instructions to user at top of form area. -->
+                <h3>To get in contact with me, please leave some of your <br>information in the input fields below.</h3>
+                
+                <!-- Div 1 to set up the left column of the 2 columns where form is. For labels and symmetry, even though some don't line up quite right. -->
+                <div id="formPage1" style="display: inline-block">
+                    
+                    <!-- Form tag holds all the labels -->
+                    <form>
+                        
+                        <!-- Used label tags for most everything, so clicking on text highlights the associated input. -->
+                        <label for="name" class="formLabels" id="nameLabel">Name: </label>
+                        
+                        <!-- Had to add a bunch of line breaks to get the labels to line up with the inputs. -->
+                        <br><br>
+                    
+                        <font class="formLabels" id="radioLabel">Preferred method of contact: </font>
+                        
+                        <br><br><br>
+                        
+                        <label for="email" class="formLabels" id="emailLabel">Email Address: </label>
+                        
+                        <br><br><br>
+                        
+                        <label for="phone" class="formLabels" id="phoneLabel">Phone Number: </label>
+                        
+                        <br><br>
+                        
+                        <label for="contactReason" class="formLabels" id="contactLabel">Reason for Contact: </label>
+                        
+                        <br><br>
+                        
+                        <label for="other" class="formLabels" id="otherLabel">If other, please specify: </label>
+                        
+                        <br><br><br><br><br><br>
+                        
+                        <label for="opinion" class="formLabels" id="opinionlabel">Your opinion of this website: </label>
+                        
+                        <br><br>
+                        
+                        <label for="visits" class="formLabels" id="visitsLabel">Number of times visiting this site: </label>
+                        
+                        <br><br><br>
+                    </form>
+                </div>
+                
+                <!-- Div 2 contains the inputs and sets them off to the right of labels. Margin on the left to space things out a little bit. -->
+                <div id="formPage2" style="display: inline-block; margin-left: 5%">
+                    
+                    <!-- Form tag for the inputs. Tried to give meaningful/intuitive accesskey assignments. Tab order follows appearance in page. -->
+                    <form>
+                        
+                        <!-- Text box associated with the name label. -->
+                        <input type="text" name="name" id="name" tabindex="1" accesskey="n">
+                        
+                        <!-- More line breaks. Did my best to align labels and inputs properly. -->
+                        <br><br>
+                        
+                        <!-- Radio button "select boxes" associated with the preffered method of contact label. -->
+                        <input type="radio" name="contact" id="contact1" tabindex="2" accesskey="m">
+                        <label for="contact1">Email</label>
+                        
+                        <br>
+                    
+                        <input type="radio" name="contact" id="contact2" tabindex="3" accesskey="p">
+                        <label for="contact2">Phone</label>
+                        
+                        <br><br>
+                        
+                        <!-- Text box associated with the email label. -->
+                        <input type="text" name="email" id="email" tabindex="4" accesskey="e">
+                        
+                        <br><br>
+                        
+                        <!-- Telephone text box associated with phone number label. -->
+                        <input type="tel" name="phone" id="phone" tabindex="5" accesskey="t">
+                        
+                        <br><br>
+                    
+                        <!-- Datalist input filled with possible reasons for contact. Associated with reason for contact label. -->
+                        <input type="text" name="contactReason" id="contactReason" list="contactReasons" tabindex="6" accesskey="r">
+                        <datalist id="contactReasons">
+                            <option value="information" label="More Information">
+                            <option value="business" label="Business">
+                            <option value="issue" label="Issue with Website">
+                            <option value="other" label="Other Issue">
+                        </datalist>
+                        
+                        <br><br>
+                        
+                        <!-- Text area for user to specify a different reason for contact if they selected other. Associated with the other reason specification label. -->
+                        <textarea name="other" id="other" rows="5" col="50" tabindex="7" accesskey="u"></textarea>
+                    
+                        <br><br>
+                        
+                        <!-- Slider to survey user opinion of site. Associated with opinion label. -->
+                        <span>Very Poor </span><input type="range" name="opinion" id="opinion" min="1" max="100" tabindex="8" accesskey="o"><span> Very High</span>
+                        
+                        <br><br>
+                        
+                        <input type="number" name="visits" id="visits" min="1" max="50" value="1" tabindex="9" accesskey="v">
+                        
+                        <br><br>
+                        
+                        <!-- Submit and clear buttons. -->
+                        <span>
+                            <input type="submit" name="submit" id="submit" tabindex="10" accesskey="s">
+                            <input type="reset" name="reset" id="reset" value="Clear" tabindex="11" accesskey="c">
+                        </span>
+                    </form>
+                </div>
+            </main>
+
+            <!-- Footer tag -->
+            <footer id="footer">
+                <p><small>Drake Hetland Personal Website 2021</small></p>
+            </footer>
+        </span>
     </body>
 </html>

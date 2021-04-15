@@ -1,0 +1,10 @@
+C:\Users\hetlandd2289\source\repos\MagicDates\bin\Debug\MagicDates.exe.config
+C:\Users\hetlandd2289\source\repos\MagicDates\bin\Debug\MagicDates.exe
+C:\Users\hetlandd2289\source\repos\MagicDates\bin\Debug\MagicDates.pdb
+C:\Users\hetlandd2289\source\repos\MagicDates\obj\Debug\MagicDates.csprojAssemblyReference.cache
+C:\Users\hetlandd2289\source\repos\MagicDates\obj\Debug\MagicDates.magicDates.resources
+C:\Users\hetlandd2289\source\repos\MagicDates\obj\Debug\MagicDates.Properties.Resources.resources
+C:\Users\hetlandd2289\source\repos\MagicDates\obj\Debug\MagicDates.csproj.GenerateResource.cache
+C:\Users\hetlandd2289\source\repos\MagicDates\obj\Debug\MagicDates.csproj.CoreCompileInputs.cache
+C:\Users\hetlandd2289\source\repos\MagicDates\obj\Debug\MagicDates.exe
+C:\Users\hetlandd2289\source\repos\MagicDates\obj\Debug\MagicDates.pdb

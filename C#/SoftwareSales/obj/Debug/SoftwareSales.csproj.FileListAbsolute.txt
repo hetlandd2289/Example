@@ -1,0 +1,10 @@
+C:\Users\hetlandd2289\source\repos\SoftwareSales\bin\Debug\SoftwareSales.exe.config
+C:\Users\hetlandd2289\source\repos\SoftwareSales\bin\Debug\SoftwareSales.exe
+C:\Users\hetlandd2289\source\repos\SoftwareSales\bin\Debug\SoftwareSales.pdb
+C:\Users\hetlandd2289\source\repos\SoftwareSales\obj\Debug\SoftwareSales.csprojAssemblyReference.cache
+C:\Users\hetlandd2289\source\repos\SoftwareSales\obj\Debug\SoftwareSales.Form1.resources
+C:\Users\hetlandd2289\source\repos\SoftwareSales\obj\Debug\SoftwareSales.Properties.Resources.resources
+C:\Users\hetlandd2289\source\repos\SoftwareSales\obj\Debug\SoftwareSales.csproj.GenerateResource.cache
+C:\Users\hetlandd2289\source\repos\SoftwareSales\obj\Debug\SoftwareSales.csproj.CoreCompileInputs.cache
+C:\Users\hetlandd2289\source\repos\SoftwareSales\obj\Debug\SoftwareSales.exe
+C:\Users\hetlandd2289\source\repos\SoftwareSales\obj\Debug\SoftwareSales.pdb

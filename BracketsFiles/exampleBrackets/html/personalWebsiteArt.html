@@ -1,0 +1,81 @@
+<!-- 
+Auth: Drake Hetland
+Date: 2/1/2021
+Desc: Home page of my personal website
+Icon by freezinghot at https://www.teepublic.com/user/freezinghot
+Background image from http://infoupdate.org/dead-cells-wallpaper-hd/
+All other art belongs to Drake Hetland Copyright 2021
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Meta info. Sets what you see in the tab, and sets font -->
+    <head>
+        <title>Drake Hetland</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/personalWebsite.css">
+        <link rel="icon" href="../Images/MHWLogo.jfif" type="image/x-icon">
+        <script></script>
+        <style>
+            /* Did my best to center the images on the page and make the border as non-obnoxious as possible.
+            Would like to adjust alignment later to have navigation in the same spot as on other pages. */
+            body{
+                background-image: url(../Images/DeadCells2.jfif);
+                width: 40%
+            }
+            /* Set the border solor, alignment, and padding. Made text readable and pictures distinguishable from background images. */
+            figure{
+                border: 2px solid black; background-color: #AAA; text-align: center; padding-top: 20px
+            }
+            main{
+                color: #000
+            }
+        </style>
+    </head>
+    
+    <!-- Body tag -->
+    <body>
+        <!-- Header tag -->
+        <header> 
+            <h1 id="main">Art</h1>
+        </header>
+        
+        <!-- Sets up nav portion of page -->
+        <nav>
+            <ul>
+                <li><a href="personalWebsite.html">Home</a></li>
+                <li><a href="personalWebsiteFavorites.html">Favorites</a></li>
+                <li><a href="personalWebsiteContact.html">Contact</a></li>
+                <li><a href="personalWebsiteArt.html">Art</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main tag -->
+        <main>
+            <!-- Figure tag -->
+            <figure>
+                <!-- Links image, sets alt, height, and width. -->
+                <img src="../Images/IMG-2248.jpg" alt="Unfinished Surreal Self Portrait"  height="370" width="230">
+                <!-- Sets up figcaption so I can type and put a meter in. -->
+                <figcaption>
+                    Latest Art Piece<br>
+                    <!-- Meter describing progress to drawing completion. -->
+                    Progress to Completion of Piece<meter value="30" min="0" max="100">Progress to Completion</meter>
+                </figcaption>
+            </figure>
+
+            <!-- New figure element to separate new work from old work. -->
+            <figure style="padding-bottom: 20px">
+                Previously Completed Works
+                <img src="../Images/IMG-0619.jpg" alt="Titanfall Pilot Self Portrait" height="350" width="350">
+                <img src="../Images/IMG-1487.jpg" alt="Hat, Headphones, and Glasses Still Life Drawing" height="300" width="350">
+                <img src="../Images/IMG-1678.jpg" alt="Full Body Portrait" height="450" width="350">
+                <!-- For accessibility purposes, included a text description of images included in page. -->
+            </figure>
+        </main>
+        
+        <!-- Footer tag -->
+        <footer>
+            <p><small>Drake Hetland Personal Website 2021</small></p>
+        </footer>
+    </body>
+</html>

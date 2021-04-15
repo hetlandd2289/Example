@@ -1,0 +1,10 @@
+C:\Users\Drake-PC\source\repos\exam2Practical\obj\Debug\exam2Practical.csprojAssemblyReference.cache
+C:\Users\Drake-PC\source\repos\exam2Practical\obj\Debug\exam2Practical.Form1.resources
+C:\Users\Drake-PC\source\repos\exam2Practical\obj\Debug\exam2Practical.Properties.Resources.resources
+C:\Users\Drake-PC\source\repos\exam2Practical\obj\Debug\exam2Practical.csproj.GenerateResource.cache
+C:\Users\Drake-PC\source\repos\exam2Practical\obj\Debug\exam2Practical.csproj.CoreCompileInputs.cache
+C:\Users\Drake-PC\source\repos\exam2Practical\bin\Debug\exam2Practical.exe.config
+C:\Users\Drake-PC\source\repos\exam2Practical\bin\Debug\exam2Practical.exe
+C:\Users\Drake-PC\source\repos\exam2Practical\bin\Debug\exam2Practical.pdb
+C:\Users\Drake-PC\source\repos\exam2Practical\obj\Debug\exam2Practical.exe
+C:\Users\Drake-PC\source\repos\exam2Practical\obj\Debug\exam2Practical.pdb

@@ -1,0 +1,10 @@
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\bin\Debug\chapter6Assignment.exe.config
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\bin\Debug\chapter6Assignment.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\bin\Debug\chapter6Assignment.pdb
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\obj\Debug\chapter6Assignment.csprojAssemblyReference.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\obj\Debug\chapter6Assignment.hospitalCharges.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\obj\Debug\chapter6Assignment.Properties.Resources.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\obj\Debug\chapter6Assignment.csproj.GenerateResource.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\obj\Debug\chapter6Assignment.csproj.CoreCompileInputs.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\obj\Debug\chapter6Assignment.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\chapter6Assignment\obj\Debug\chapter6Assignment.pdb

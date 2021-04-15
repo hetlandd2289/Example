@@ -1,0 +1,185 @@
+/*
+Auth: Drake Hetland
+Date: 2/1/2021
+Edit: 4/8/2021
+Desc: First, and therefore the largest, Stylesheet for my personal website
+Color scheme: Analogous.
+*/
+body {
+                color: #02E0FF;
+                background-color: #1E3234;
+                
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+              
+                
+                font-family: Arial, sans-serif;
+                
+            }
+/* Same colors for types of text for repetition and contrast. */
+/* Mostly for stuff that was inline, or in the head. Consolidation */
+p{
+    color: #02E0FF;
+    }
+
+blockquote{
+    color: #02E9FF;
+}
+
+#headers{
+    color:#0DAD79
+}
+
+.lists{
+    background-color: #0E939F; 
+    padding-left: 10px; 
+    padding-bottom: 5px; 
+    padding-top: 5px;                            
+    border-style: solid; 
+    border-color: #213931; 
+    width: 90px
+}
+
+#floatImage{
+    float: left;
+}
+
+/**********/
+/**LAYOUT**/
+/**********/
+
+#wrapper{
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-areas: 
+        "h1"
+        "nav"
+        "main"
+        "footer";
+    grid-gap: 20px
+}
+
+/* Sets the title header */
+
+#h1{
+    grid-area: "h1";
+    grid-column: 1/ span 2;
+    color: #00FFAB;
+}
+
+/* Sets up most of the nav */
+
+#nav{
+    grid-area: "nav";
+    grid-column: 1/ span 1;
+    position: sticky;
+    top: 0;
+    font-size: 110%;
+    background-color: #0E939F;
+    padding-left: 20%;
+    border-style: solid;
+    border-color: #000;
+    min-width: 100px;
+    text-align: center
+}
+
+/* Sets main */
+
+#main {
+    color: #00FFAB;
+    grid-area: "main";
+    grid-column: 2/ span 2
+}
+
+/* Sets footer and fixes in bottom right */
+
+#footer{
+    grid-area: "footer";
+    grid-column: 2/ span 2;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-right: 10px
+}
+
+/*********/
+/***NAV***/
+/*********/
+
+#lists{
+    color: #02E0FF;
+}
+
+nav ul{
+    list-style-type: none;
+    background-color: #0E939F; 
+    padding-left: 10px; padding-bottom: 5px; 
+    padding-top: 5px;
+    border-style: solid; 
+    border-color: #213931; 
+    width: 80px;
+}
+
+nav a{
+    text-decoration: none;
+    
+}
+
+/*********/
+/**LINKS**/
+/*********/
+
+a:link{
+    color: #FFF
+}
+
+a:visited{
+    color: #000
+}
+
+a:focus{
+    color: #FF4551
+}
+
+a:hover{
+    color: #FF9EF2
+}
+
+a:active{
+    color: #7F6BFF
+}
+
+/*********/
+/**TABLE**/
+/*********/
+
+/* Gets indevidual cells and data therein looking how I want */
+table td{
+    text-align: center;
+    border-style: solid;
+    padding: 5px;
+    border-color: #0E939F
+}
+
+/* Zebra stripes how I want it */
+tr:nth-child(odd){
+    background-color: #02E0FF;
+    color: #1E3234;
+}
+
+tr:nth-child(even){
+    background-color: #1E3234;
+    color: #02E0FF;
+}
+
+/* Pulls headers out of zebra striping */
+table th{
+    background-color: #1E3234;
+    color: #02E0FF;
+}
+
+/* Left align caption to keep in line with other "headers" */
+table caption{
+    text-align: left;
+}

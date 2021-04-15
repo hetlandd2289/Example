@@ -1,0 +1,191 @@
+/*  
+Auth: Drake Hetland
+Date: 3/20/2021
+Desc: Home page Exam 2 website
+Favicon taken from Brooksgolfclub.com - express permission granted by owner Brett Hetland
+Portrait taken from bretthetland.com - express permission granted by owner Brett Hetland
+Color-scheme: Monochromatic
+Colors used: #A4EB86, #061001, #7AC65A
+*/
+
+/* Body element to set general parameters */
+body{
+    color: #A4EB86;
+    background-color: #061001;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* Setting up horizontal, fixed nav bar */
+nav{
+    position: fixed;
+    top: 0;
+    background-color: #7AC65A
+}
+
+nav ul{
+    list-style-type: none
+}
+
+nav li{
+    display: inline
+}
+
+nav a{
+    padding: 14%;
+    text-decoration: none;
+    font-size: 120%
+}
+
+nav a:visited{
+    color: #061001
+}
+
+/*************/
+/* HOME PAGE */
+/*************/
+
+/* Set the grid that the home page follows */
+#homeGridContainer{
+    display: grid;
+    grid-template-columns: 90px auto;
+    
+    grid-template-areas: 
+        "homeHeader"
+        "homeMain"
+        "homeFooter";
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Sets specifics of how each part appears in respective grid */
+#homeHeader{
+    grid-column: 1/ span 1;
+    /* Header was being covered by nav bar, added top padding to stop overlap */
+    padding-top: 45px;
+    /* Header was uncomfortably close to edge of page, pushed in a little */
+    padding-left: 20px;
+}
+
+#homeMain{
+    grid-column: 1/ span 2;
+    /* Brought meat of page in from edge of window */
+    padding-left: 10%
+}
+
+#homeFooter{
+    grid-column: 1/ span 2;
+    /* Centered footer on page */
+    padding-left: 48%
+}
+
+#homeNav{
+    grid-column: 1/ span 2;
+    width: 80%;
+    /* Made nav bar look more full */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/**************/
+/* ABOUT PAGE */
+/**************/
+
+/* Set the grid that the about page follows */
+#aboutGridContainer{
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-gap: 10px;
+    
+    grid-template-areas: 
+        "aboutHeader"
+        /* Set up 2 "mains" so I could configure two text columns side by side */
+        "aboutMain aboutMain2"
+        "aboutFooter";
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Sets specifics of how each part appears in respective grid */
+#aboutHeader{
+    grid-column: 1/ span 1;
+    /* Header was being covered by nav bar, added top padding to stop overlap */
+    padding-top: 45px;
+    /* Header was uncomfortably close to edge of page, pushed in a little */
+    padding-left: 20px;
+}
+
+#aboutMain{
+    grid-column: 1/ span 1;
+    
+}
+#aboutMain2{
+    grid-column: 2/ span 2
+}
+
+#aboutFooter{
+    grid-column: 1/ span 2;
+    /* Centered footer on page */
+    padding-left: 48%
+}
+
+#aboutNav{
+    grid-column: 1/ span 2;
+    width: 80%;
+    /* Made nav bar look more full */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/****************/
+/* CONTACT PAGE */
+/****************/
+
+/* Set the grid that the contact page follows */
+#contactGridContainer{
+    display: grid;
+    grid-template-columns: 90px auto;
+    
+    grid-template-areas: 
+        "contactHeader"
+        "contactMain"
+        "countactFooter";
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Sets specifics of how each part appears in respective grid */
+#contactHeader{
+    grid-column: 1/ span 1;
+    /* Header was being covered by nav bar, added top padding to stop overlap */
+    padding-top: 45px;
+    /* Header was uncomfortably close to edge of page, pushed in a little */
+    padding-left: 20px;
+}
+
+#contactMain{
+    grid-column: 1/ span 2;
+    /* Brought meat of page in from edge of window */
+    padding-left: 10%
+}
+
+#contactFooter{
+    grid-column: 1/ span 2;
+    /* Centered footer on page */
+    padding-left: 48%
+}
+
+#contactNav{
+    grid-column: 1/ span 2;
+    width: 80%;
+    /* Made nav bar look more full */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+

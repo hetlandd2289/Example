@@ -1,0 +1,10 @@
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\bin\Debug\joesAutomotive.exe.config
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\bin\Debug\joesAutomotive.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\bin\Debug\joesAutomotive.pdb
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\obj\Debug\joesAutomotive.csprojAssemblyReference.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\obj\Debug\joesAutomotive.Form1.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\obj\Debug\joesAutomotive.Properties.Resources.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\obj\Debug\joesAutomotive.csproj.GenerateResource.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\obj\Debug\joesAutomotive.csproj.CoreCompileInputs.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\obj\Debug\joesAutomotive.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\joesAutomotive\obj\Debug\joesAutomotive.pdb
