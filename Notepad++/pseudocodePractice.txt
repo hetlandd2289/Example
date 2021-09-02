@@ -1,0 +1,36 @@
+#6
+//Set variables
+declare float purchaseAmount = 0.0
+declare float stateTax = 0.04
+declare float countyTax = 0.02
+declare float totalTax = stateTax + countyTax
+
+//Get purchase amount
+display "Enter amount of purchase: $"
+input purchaseAmount
+
+//Display purchase and tax values
+display "Original purchase amount is $" purchaseAmount
+display "State sales tax is $" purchaseAmount * stateTax
+display "County sales tax is $" purchaseAmount * countyTax
+display "Total tax is $" purchaseAmount * totalTax
+display "Total sale is $" (totalTax + 1) * purchase amount //(purchaseAmount * stateTax) + (purchaseAmount * countyTax) + purchaseAmount
+
+#2
+//Declare variables
+declare float totalSales
+set totalSales = 0.0
+declare float annualProfits
+set annualProfits = 0.0
+declare float profitPercent
+set profitPercent = 0.23
+
+//Get the total sales
+display "Enter the projected total sales"
+intput totalSales
+
+//Calcualte the profits
+set profit = totalSales * profitPercent
+
+//Display the profits
+display "The total profits will be $"annualProfits
