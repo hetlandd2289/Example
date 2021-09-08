@@ -1,0 +1,111 @@
+//#1
+//Create module
+module converter(ref float distance)
+	distance *= .6214
+end module
+
+//Create main and call module
+module main()
+	declare float distance = 0.0
+	display "Enter a distance in kilometers: " input distance
+	call converter(ref distance)
+	display distance "is the number converted to miles."
+end module
+//wrong
+
+
+module main()
+	//declare variables
+	declare float km = 0.0
+	
+	//get input (number of km)
+	display "Enter the number of kilometers: "
+	inout km
+	
+	//convert and display as miles
+	display km + " kilometers is " + " (km * 0.6214) + miles."
+end module
+//right
+
+
+module convertKMtoMiles(float km)
+	display km + " kilometers is " + (km * 0.6214) + " miles."
+end module
+
+module main()
+	//declare variables
+	declare float km = 0.0
+	
+	//get the input
+	display "Enter the number of kilometers: "
+	input km
+	
+	//convert and display as miles
+	call convertKMtoMiles(km)
+end module
+//also right
+
+
+//#11
+module amountCalculator(int amount, int people)
+	display (amount * people / 10) + " is the amount of packages of hot dogs needed."
+	display (amount * people / 8) + " is the amount of packages of buns needed."
+end module
+
+module leftOverCalculator(int amount, int people)
+	display (amount * people) MOD 10 + " is the amount of left over hot dogs."
+	display (amount * people) MOD 8 + " is the amount of left over buns."
+end module
+
+module main()
+	//declare variables
+	//declare int dogs = 0
+	//declare int buns = 0
+	//declare int leftOverDog = 0
+	//declare int leftOverBuns = 0
+	declare int people = 0
+	declare int amount = 0
+	
+	//get inputs
+	"Number of people attending the cookout: " input people
+	"Number of hot dogs each person is given: " input amount
+	
+	call amountCalculator(amount, people)
+	call leftOverCalculator(amount, people)
+end module
+
+
+module getHotdogs()
+	declare int hotdogsPerPackage = 10
+	declare int hotdogs = (guest * serving) / 10
+	declare int leftOverDog = (hotdogs * hotdogsPerPackage) - (guest * servings) 
+	
+	display "You will need " + hotdogs + " packages of hotdogs."
+	display "You will have " + leftOverDog + " leftover hotdogs."
+end module
+
+|
+same below
+|
+
+module getBuns()
+	declare int bunsPerPackage = 8
+	declare int buns = (guests * servings) / bunsPerPackage
+	declare int leftOverBuns = 
+end module
+
+module main()
+	declare int guests = 0
+	declare int servings = 0
+	
+	//Get inputs
+	display "Enter the number of guests: "
+	input guests
+	display "Enter the servings per guests: "
+	input servings
+	
+	//Calculate the needs
+	call getHotdogs(guests, servings)
+	call getBuns(guests, servings)
+	
+end module

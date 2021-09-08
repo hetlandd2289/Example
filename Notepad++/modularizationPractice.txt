@@ -1,0 +1,26 @@
+// Task: Making a Pizza
+
+Primary: Make a pizza
+- crust
+-- prepare dough
+-- lay it out
+-- pinch
+
+- sauce
+-- open can
+-- mix the sauce
+-- spread over the crust
+
+- cheese
+-- mix mozarella and sharp cheddar cheese
+-- sprinkle over sauce heavily (x*2)
+
+- toppings
+-- add pepperoni to cover cheese area
+cheese()
+-- add sausage heavily
+cheese()
+
+- cooking
+-- preheat oven to xdegrees
+-- bake until the cheese is melted and crust is golden brown

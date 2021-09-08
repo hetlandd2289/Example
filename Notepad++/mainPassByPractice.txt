@@ -1,0 +1,13 @@
+Module main()
+	Declare int num = 42
+	Call doStuff(ref num) //Argument
+	display num // 40
+End module
+
+Module doStuff(ref int num) //Parameter
+	if (num == 42)
+		Display "This is the meaning to life the universe and everything."
+	else "This number is irrelevant."
+	num = 40
+	End if
+End Module
