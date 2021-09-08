@@ -1,0 +1,215 @@
+<!--
+Auth: Drake Hetland
+Date: 5/11/2021
+Desc: about page for final exam website
+Info: icon from user higgsas on reddit: https://www.reddit.com/r/Verticalwallpapers/comments/ckbazb/vaporwave_sunset_1440x2560/
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About</title>
+        <meta charset="utf-8">
+        <link link rel="stylesheet" href="../css/final.css">
+        <link rel="icon" href="../media/images/vaporwaveSunset.png">
+        <script type="text/javascript" src="../JS/jquery-3.6.0.min.js"></script>
+        <!-- Javascript code that gets the date and changes color of text in corresponding spot on hours table -->
+        <script>
+            var d = new Date();
+            var n = d.getDay();
+            
+            if (n == 0){
+                document.querySelector("#sun").style.color = "#662527";
+            }
+            else if{
+                (n == 1){
+                    document.querySelector("#mon").style.color = "#662527";
+                }
+            }
+            else if{
+                (n == 2){
+                    document.querySelector("#tue").style.color = "#662527";
+                }
+            }
+            else if{
+                (n == 3){
+                    document.querySelector("#wed").style.color = "#662527";
+                }
+            }
+            else if{
+                (n == 4){
+                    document.querySelector("#thu").style.color = "#662527";
+                }
+            }
+            else if{
+                (n == 5){
+                    document.querySelector("#fri").style.color = "#662527";
+                }
+            }
+            else{
+                document.querySelector("#sat").style.color = "#662527";
+            }
+            
+        </script>
+        <style></style>
+    </head>
+
+    <!-- Body element holds everything the user can see -->
+    <body>
+        <!-- Grid wrapper to implement grid layout -->
+        <span id="gridWrapper">
+            <!-- Header with header id for proper formatting -->
+            <header id="header">
+                <h1>About</h1>
+            </header>
+
+            <!-- Nav element with nav id for proper formatting and customization of nav list elements -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main holds brunt of information on page, main id for formatting -->
+            <main id="contactMain">
+                <!-- First div to format the page in the way I want it, side by side -->
+                <div style="display: inline-block; margin-right: 20%">
+                    <!-- Smaller header to draw attention -->
+                    <h3>Our Company</h3>
+                    <p style="max-width: 140px">Most of what we are about here can be found on the home page, but we could go a bit into our history, Aperiam aut sint aut odit. Dolorem quia at et. Quia quis labore perspiciatis recusandae vel a iusto. <br><br>Quibusdam numquam voluptatum omnis incidunt sunt est ut. Qui optio et vel quos qui. Dicta rem et officia necessitatibus dolores eveniet voluptatem veniam. <br><br>Sunt sapiente aut et asperiores odit perspiciatis dolores beatae. Reprehenderit enim qui libero quo molestiae. Rerum error distinctio eos autem unde quia. Quos est assumenda qui cum sint quisquam non. <br><br>Dolor sit qui ex quaerat non aut eos.</p>
+                    
+                    <br>
+                    
+                    <!-- Table element containing information on services and cost -->
+                    <h3>Services</h3>
+                    <table>
+                        <tr>
+                            <th>Service</th>
+                            <th>Cost</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>Entry</td>
+                            <td>$35</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Moonrise Entry</td>
+                            <td>$25</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Pizza</td>
+                            <td>$10</td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td>Hot Dog</td>
+                            <td>$3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Popcorn</td>
+                            <td>$3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Pretzel</td>
+                            <td>$3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Fountain Drink</td>
+                            <td>$5</td>
+                        </tr>
+                    
+                    </table>
+                </div>
+                
+                <!-- Second div element containing the information displayed right -->
+                <div style="display: inline-block">
+                    <!-- Smaller header to draw attention -->
+                    <h3>Our Staff</h3>
+                    
+                    <!-- Figure containing image of employee -->
+                    <figure>
+                        <img src="../media/images/drake.jpg" alt="GM Drake Picture" style="width: 140px">
+                    </figure>
+                    <!-- Employee name and job -->
+                    <p>Drake Hetland: General Manager</p>
+                    <br>
+                    
+                    <!-- Figure containing image of employee -->
+                    <figure>
+                        <img src="../media/images/kody.jpg" alt="Employee Kody" style="width: 140px">
+                    </figure>
+                    <!-- Employee name and job -->
+                    <p>Kody Wiebersch: Employee</p>
+                    <br>
+                    
+                    
+                    <!-- Figure containing image of employee -->
+                    <figure>
+                        <img src="../media/images/frosty.jpg" alt="Employee Ben" style="width: 140px">
+                    </figure>
+                    <!-- Employee name and job -->
+                    <p>Ben Frostestad: Employee</p>
+                    
+                    <br>
+                    
+                    <!-- Table containing information regarding hours of operation each day of the week -->
+                    <!-- Smaller header to draw attention -->
+                    <h3>Hours</h3>
+                    <table style="margin-left: 30px">
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours</th>
+                        </tr>
+                        
+                        <tr id="sun">
+                            <td>Sunday</td>
+                            <td>2PM-12AM</td>
+                        </tr>
+                        
+                        <tr id="mon">
+                            <td>Monday</td>
+                            <td>2PM-10PM</td>
+                        </tr>
+                        
+                        <tr id="tue">
+                            <td>Tuesday</td>
+                            <td>2PM-10PM</td>
+                        </tr>
+                        
+                        <tr id="wed">
+                            <td>Wednesday</td>
+                            <td>2PM-10PM</td>
+                        </tr>
+                        
+                        <tr id="thu">
+                            <td>Thursday</td>
+                            <td>2PM-10PM</td>
+                        </tr>
+                        
+                        <tr id="fri">
+                            <td>Friday</td>
+                            <td>2PM-2AM</td>
+                        </tr>
+                        
+                        <tr id="sat">
+                            <td>Saturday</td>
+                            <td>2PM-2AM</td>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+
+            <!-- Footer tag with copyright -->
+            <footer id="footer">
+                <font>&copy;Moonrise Retro Arcade 2021 <a href="../media/images/drake.jpg">Drake Image</a>, <a href="../media/images/kody.jpg">Kody Image</a>, <a href="../media/images/frosty.jpg">Ben Image</a></font>
+            </footer>
+        </span>
+    </body>
+</html>

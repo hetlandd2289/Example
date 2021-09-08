@@ -3,6 +3,7 @@ Auth: Drake Hetland
 Date: 2/1/2021
 Desc: Home page of my personal website
 Icon by freezinghot at https://www.teepublic.com/user/freezinghot
+Some code for the time based greeting pulled from https://www.w3schools.com/jsref/jsref_if.asp
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -22,13 +23,36 @@ Icon by freezinghot at https://www.teepublic.com/user/freezinghot
               media=(max-device-width:1920px)>
         
         <link rel="icon" href="../Images/MHWLogo.jfif" type="image/x-icon">
-        <script></script>
+        <script type="text/javascript" src="../JS/jquery-3.6.0.min.js"></script>
+        <!-- Function that makes a creates a popup greeting based on time, and another that gives a button the function to toggle the video -->
+        <script>
+            function showMessage(){
+                var time = new Date().getHours();
+                var greeting;
+                if (time < 10) {
+                    alert("Good Morning! Welcome to the home page of my website!");
+                }
+                else if (time < 20){
+                    alert("Good Day! Welcome to the home page of my website!");
+                }
+                else {
+                    alert("Good Evening! Welcome to the home page of my website!");
+                }
+            }
+            
+            function showVideo(){
+                $('#daisyVideo').toggle();
+            }
+        </script>
         <style>
             p{
                 font-size: 140%
             }
         </style>
+        <meta name="description" content="Drake Hetland personal website for getting to know me, an individual website developer and game design major interested in computer work of any kind">
     </head>
+    
+    <!-- about myself personal website drake hetland dogs gamer gaming game design favorite quotes movies coder code websites music art xbox computer -->
     
     <!-- Body tag -->
     <body>
@@ -67,11 +91,34 @@ Icon by freezinghot at https://www.teepublic.com/user/freezinghot
                     When I turned 13, I got an Xbox One for Christmas. Finally, last year, I built my first PC, and have begun transitioning to PC gaming.
                     Gaming isn't my only hobby though. I watch a lot of anime as well, and I also enjoy spending time with my two dogs.
                 </p>
+                
+                <br><br>
+                
+                <!-- Figure to house video and caption -->
+                <figure>
+                    <figcaption id="lists">Daisy Mauling a Bag</figcaption>
+                    <video width="200" controls="controls" title="Daisy Destroys" id="daisyVideo">
+                        <source src="../Media/Videos/daisy.mp4" type="video/mp4">
+                    </video>
+                    
+                    <br>
+                    
+                    <!-- Button using the on click event to toggle the video -->
+                    <button type="button" onclick="showVideo()">Show/Hide</button>
+                </figure>
+                
             </main>
             <!-- Footer tag -->
             <footer id="footer">
                 <p><small>Drake Hetland Personal Website 2021</small></p>
             </footer>
         </span>
+        
+        <!-- Uses the on load event to call the function stored in the head -->
+        <script>
+            this.onload(showMessage());
+            
+        </script>
+        
     </body>
 </html>

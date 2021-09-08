@@ -24,6 +24,7 @@ Image from besthdwallpaper.com
               media=(max-device-width:1920px)>
         
         <link rel="icon" href="../Images/MHWLogo.jfif" type="image/x-icon">
+        <script type="text/javascript" src="../JS/jquery-3.6.0.min.js"></script>
         <script></script>
         <style></style>
     </head>
@@ -99,15 +100,19 @@ Image from besthdwallpaper.com
                 <header>
                     <h3 id="headers">Words</h3>
                 </header>
-                <!-- Description list tag -->
-                <dl id="lists">
-                    <dt><b>Tragic</b></dt>
-                        <dd>Causing extreme distress or sorrow</dd>
-                    <dt><b>Bizarre</b></dt>
-                        <dd>Very strange or unusual, especially so as to cause interest or amusement</dd>
-                    <dt><b>Fascinate</b></dt>
-                        <dd>Draw irresistibly the attention and interest of</dd>
-                </dl>
+                
+                <details id="lists">
+                    <summary>Tragic</summary>
+                    Causing extreme distress or sorrow
+                </details>
+                <details id="lists">
+                    <summary>Bizarre</summary>
+                    Very strange or unusual, especially so as to cause interest or amusement
+                </details>
+                <details id="lists">
+                    <summary>Fascinate</summary>
+                    Draw irresistibly the attention and interest of
+                </details>
                 
                 <br>
                 
@@ -174,11 +179,21 @@ Image from besthdwallpaper.com
                 
                 <br>
                 
+                <!-- Audio tag. I know the file is huge, but it is the best I could do on short 
+                notice while also fitting the theme of the website thus far. -->
+                <font id="otherHeaders">Music from Nier: Automata</font>
+                <br>
+                <audio controls="controls">
+                    <source src="../Media/Sounds/02%20City%20Ruins%20(Rays%20of%20Light).m4a">
+                </audio>
+                
+                <br>
+                
                 <!-- Figure tag -->
                 <figure>
                     
                     <!-- Figcaption so it isn't just an image randomly floating -->
-                    <figcaption>Titanfall 2 Art</figcaption>
+                    <figcaption id="otherHeaders">Titanfall 2 Art</figcaption>
                     
                     <!-- Picture tag setting up srcset -->
                     <picture>
@@ -192,11 +207,27 @@ Image from besthdwallpaper.com
                          srcset="../Images/titanfall-medium.jpg 500w, ../Images/titanfall-large.jpg 750w"
                          alt="Titanfall Art"; style="max-width: 100%">
                 </figure>
+                
+                <br>
+                
+                <!-- Figure containing a iframe displaying the Titanfall 2 launch trailer -->
+                <figure>
+                    <figcaption id="otherHeaders">Titanfall 2 Launch Trailer</figcaption>
+                    <iframe src="http://www.youtube.com/embed/VqeMjHmL9eg" width="640" height="400"></iframe>
+                </figure>
             </main>
             <!-- Footer tag -->
             <footer id="footer">
                 <p><small>Drake Hetland Personal Website 2021</small></p>
             </footer>
         </span>
+        
+        <script>
+            /* Using JQuery to make changes */
+            $('#otherHeaders').css('color','#0DAD79');
+            $('#otherHeaders').css('fontSize', 17);
+            $('#otherHeaders').css('fontWeight','bold')
+        
+        </script>
     </body>
 </html>

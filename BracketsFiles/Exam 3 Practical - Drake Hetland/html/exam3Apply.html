@@ -1,0 +1,110 @@
+<!--
+Auth: Drake Hetland
+Date: 4-20-2021
+Desc: Apply page for exam 3 practical
+Info: Icon sourced from clipground.com
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hetland Academy</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/exam3css.css" media="(max-device-width: 3440px)">
+        <link rel="stylesheet" href="../css/exam3Mobilecss.css" media="(max-device-width:480px)">
+        <link rel="icon" href="../images/h.jfif" type="image/x-icon">
+        <script></script>
+        <style></style>
+    </head>
+
+    <!-- Body Tag -->
+    <body>
+        
+        <!-- Span Tag for Grid Container -->
+        <span id="gridWrapperApply">
+            
+            <!-- Header Tag and ID for CSS formatting -->
+            <header id="header2">
+                <h1 style="text-align: center">Application</h1>
+            </header>
+        
+            <!-- Nav Tag and ID for CSS formatting -->
+            <nav id="navApply">
+                <li><a href="exam3Home.html">Home</a></li>
+                <li><a href="exam3Apply.html">Application</a></li>
+            </nav>
+        
+            <!-- Main Tag and ID for CSS formatting-->
+            <main id="mainApply">
+                
+                <!-- Form tag to contain all inputs and labels -->
+                <form>
+                    
+                    <!-- Fieldset to group all personal information questions -->
+                    <fieldset id="fieldsetPersonal">
+                        
+                        <!-- Legend to tell users what is contained in form -->
+                        <legend>Personal Info</legend>
+                        
+                        <!-- Text box for user's name -->
+                        <label for="nameBox" class="formLabel" id="nameLabel">First &amp; Last Name: </label>
+                        <input type="text" name="nameBox" id="nameBox" tabindex="1" accesskey="n" required>
+
+                        <br>
+
+                        <!-- Email box -->
+                        <label for="emailBox" class="formLabel" id="emailLabel">Email Contact: </label>
+                        <input type="email" name="emailBox" id="emailBox" tabindex="2" accesskey="e" required>
+
+                        <br>
+
+                        <!-- Phone number box -->
+                        <label for="phoneBox" class="formLabel" id="phoneLabel">Phone Contact: </label>
+                        <input type="tel" name="phoneBox" id="phoneBox" tabindex="3" accesskey="p" required>
+                        
+                        <br>
+                        
+                        <!-- Date box -->
+                        <label for="dateBox" class="formLabel" id="dateLabel">Date of Birth: </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="date" name="dateBox" id="dateBox" tabindex="4" accesskey="d" required>
+                    </fieldset>
+                    
+                    <br>
+                    
+                    <!-- Fieldset to group all acedemic related questions -->
+                    <fieldset id="fieldsetAcedemic">
+                        
+                        <!-- Legend for acedemic fieldset -->
+                        <legend>Acedemic Info</legend>
+                        
+                        <!-- Checkboxes and label -->
+                        <label for="interest" class="formLabel" id="interestLabel">Area&#40;s&#41; of Interest: </label>
+                        <input type="checkbox" name="interest" id="interestScience" tabindex="5"><font>Science</font><br>
+                        <input type="checkbox" name="interest" id="interestHistory" tabindex="6"><font>History</font><br>
+                        <input type="checkbox" name="interest" id="interestEnglish" tabindex="7"><font>English</font><br>
+                        <input type="checkbox" name="interest" id="interestMath" tabindex="8"><font>Math</font>
+
+                        <br><br>
+
+                        <!-- Text area tag -->
+                        <label for="extracurricular" class="formLabel" id="extracurricularLabel">Extracurricular Interests: </label><br>
+                        <textarea name="extraurricular" id="extracurricular" rows="4" cols="20" tabindex="9" accesskey="x"></textarea>
+
+                        <br><br>
+
+                        <!-- Submit Button -->
+                        <input type="submit" name="submit" id="submit" value="Submit" tabindex="10" accesskey="s">
+
+                        <!-- Clear/Reset Button -->
+                        <input type="reset" name="clear" id="clear" value="Clear" tabindex="11" accesskey="c">
+                    </fieldset>
+                </form>
+            </main>
+            
+            <!-- Footer Tag and ID for CSS formatting -->
+            <footer id="footer">
+                <font>&copy;Hetland Academy 2021</font>
+            </footer>
+        </span>
+    </body>
+</html>

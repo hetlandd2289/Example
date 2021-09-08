@@ -23,7 +23,30 @@ Icon by freezinghot at https://www.teepublic.com/user/freezinghot
               media=(max-device-width:1920px)>
         
         <link rel="icon" href="../Images/MHWLogo.jfif" type="image/x-icon">
-        <script></script>
+        <script type="text/javascript" src="../JS/jquery-3.6.0.min.js"></script>
+        <script defer src="../JS/script.js"></script>
+        <!-- Creates a function and variables for the function to use as defaults -->
+        <script>
+            $(document).ready(function(){
+                var userName = "John Smith";
+                $("#name").val(userName);
+                
+                var eMail = "john@business.com";
+                $("#email").val(eMail);
+                
+                var phone = "(777)777-7777";
+                $("#phone").val(phone);
+                
+                var reason = "Business";
+                $("#contactReason").val(reason);
+                
+                var visits = "5";
+                $("#visits").val(visits);
+                
+                var opinion = "100";
+                $("#opinion").val(opinion);
+            });
+        </script>
         <style></style>
     </head>
     
@@ -50,114 +73,130 @@ Icon by freezinghot at https://www.teepublic.com/user/freezinghot
                 
                 <!-- Header for instructions to user at top of form area. -->
                 <h3>To get in contact with me, please leave some of your <br>information in the input fields below.</h3>
-                
-                <!-- Div 1 to set up the left column of the 2 columns where form is. For labels and symmetry, even though some don't line up quite right. -->
-                <div id="formPage1" style="display: inline-block">
-                    
-                    <!-- Form tag holds all the labels -->
-                    <form>
-                        
-                        <!-- Used label tags for most everything, so clicking on text highlights the associated input. -->
-                        <label for="name" class="formLabels" id="nameLabel">Name: </label>
-                        
-                        <!-- Had to add a bunch of line breaks to get the labels to line up with the inputs. -->
-                        <br><br>
-                    
-                        <font class="formLabels" id="radioLabel">Preferred method of contact: </font>
-                        
-                        <br><br><br>
-                        
-                        <label for="email" class="formLabels" id="emailLabel">Email Address: </label>
-                        
-                        <br><br><br>
-                        
-                        <label for="phone" class="formLabels" id="phoneLabel">Phone Number: </label>
-                        
-                        <br><br>
-                        
-                        <label for="contactReason" class="formLabels" id="contactLabel">Reason for Contact: </label>
-                        
-                        <br><br>
-                        
-                        <label for="other" class="formLabels" id="otherLabel">If other, please specify: </label>
-                        
-                        <br><br><br><br><br><br>
-                        
-                        <label for="opinion" class="formLabels" id="opinionlabel">Your opinion of this website: </label>
-                        
-                        <br><br>
-                        
-                        <label for="visits" class="formLabels" id="visitsLabel">Number of times visiting this site: </label>
-                        
-                        <br><br><br>
-                    </form>
+                <div id="error">
+                    <!-- Div 1 to set up the left column of the 2 columns where form is. For labels and symmetry, even though some don't line up quite right. -->
+                    <div id="formPage1" style="display: inline-block">
+
+                        <!-- Form tag holds all the labels -->
+                        <form>
+
+                            <!-- Used label tags for most everything, so clicking on text highlights the associated input. -->
+                            <label for="name" class="formLabels" id="nameLabel">Name: </label>
+
+                            <!-- Had to add a bunch of line breaks to get the labels to line up with the inputs. -->
+                            <br><br>
+
+                            <font class="formLabels" id="radioLabel">Preferred method of contact: </font>
+
+                            <br><br><br>
+
+                            <label for="email" class="formLabels" id="emailLabel">Email Address: </label>
+
+                            <br><br><br>
+
+                            <label for="phone" class="formLabels" id="phoneLabel">Phone Number: </label>
+
+                            <br><br>
+
+                            <label for="contactReason" class="formLabels" id="contactLabel">Reason for Contact: </label>
+
+                            <br><br>
+
+                            <label for="other" class="formLabels" id="otherLabel">If other, please specify: </label>
+
+                            <br><br><br><br><br><br>
+
+                            <label for="opinion" class="formLabels" id="opinionlabel">Your opinion of this website: </label>
+
+                            <br><br>
+
+                            <label for="visits" class="formLabels" id="visitsLabel">Number of times visiting this site: </label>
+
+                            <br><br><br>
+                        </form>
+                    </div>
+
+                    <!-- Div 2 contains the inputs and sets them off to the right of labels. Margin on the left to space things out a little bit. -->
+                    <div id="formPage2" style="display: inline-block; margin-left: 5%">
+
+                        <!-- Form tag for the inputs. Tried to give meaningful/intuitive accesskey assignments. Tab order follows appearance in page. -->
+                        <form name="form" onsubmit="return formValidation()">
+
+                            <!-- Text box associated with the name label. -->
+                            <input type="text" name="name" id="name" tabindex="1" accesskey="n">
+
+                            <!-- More line breaks. Did my best to align labels and inputs properly. -->
+                            <br><br>
+
+                            <!-- Radio button "select boxes" associated with the preffered method of contact label. -->
+                            <input type="radio" name="contact" id="contact1" tabindex="2" accesskey="m">
+                            <label for="contact1">Email</label>
+
+                            <br>
+
+                            <input type="radio" name="contact" id="contact2" tabindex="3" accesskey="p">
+                            <label for="contact2">Phone</label>
+
+                            <br><br>
+
+                            <!-- Text box associated with the email label. -->
+                            <input type="text" name="email" id="email" tabindex="4" accesskey="e">
+
+                            <br><br>
+
+                            <!-- Telephone text box associated with phone number label. -->
+                            <input type="tel" name="phone" id="phone" tabindex="5" accesskey="t">
+
+                            <br><br>
+
+                            <!-- Datalist input filled with possible reasons for contact. Associated with reason for contact label. -->
+                            <input type="text" name="contactReason" id="contactReason" list="contactReasons" tabindex="6" accesskey="r">
+                            <datalist id="contactReasons">
+                                <option value="information" label="More Information">
+                                <option value="business" label="Business">
+                                <option value="issue" label="Issue with Website">
+                                <option value="other" label="Other Issue">
+                            </datalist>
+
+                            <br><br>
+
+                            <!-- Text area for user to specify a different reason for contact if they selected other. Associated with the other reason specification label. -->
+                            <textarea name="other" id="other" rows="5" col="50" tabindex="7" accesskey="u"></textarea>
+
+                            <br><br>
+
+                            <!-- Slider to survey user opinion of site. Associated with opinion label. -->
+                            <span>Very Poor </span><input type="range" name="opinion" id="opinion" min="1" max="100" tabindex="8" accesskey="o"><span> Very High</span>
+
+                            <br><br>
+
+                            <input type="number" name="visits" id="visits" min="1" max="50" value="1" tabindex="9" accesskey="v">
+
+                            <br><br>
+
+                            <!-- Submit and clear buttons. -->
+                            <span>
+                                <input type="submit" name="submit" id="submit" tabindex="10" accesskey="s" onclick="formValidation()">
+                                <input type="reset" name="reset" id="reset" value="Clear" tabindex="11" accesskey="c">
+                            </span>
+                        </form>
+                    </div>
                 </div>
-                
-                <!-- Div 2 contains the inputs and sets them off to the right of labels. Margin on the left to space things out a little bit. -->
-                <div id="formPage2" style="display: inline-block; margin-left: 5%">
-                    
-                    <!-- Form tag for the inputs. Tried to give meaningful/intuitive accesskey assignments. Tab order follows appearance in page. -->
-                    <form>
+                <!-- If Else statement providing at least a little validation -->
+                <script>
+                    /*function formValidation(){
+                        var name = document.form1.name.value;
                         
-                        <!-- Text box associated with the name label. -->
-                        <input type="text" name="name" id="name" tabindex="1" accesskey="n">
-                        
-                        <!-- More line breaks. Did my best to align labels and inputs properly. -->
-                        <br><br>
-                        
-                        <!-- Radio button "select boxes" associated with the preffered method of contact label. -->
-                        <input type="radio" name="contact" id="contact1" tabindex="2" accesskey="m">
-                        <label for="contact1">Email</label>
-                        
-                        <br>
-                    
-                        <input type="radio" name="contact" id="contact2" tabindex="3" accesskey="p">
-                        <label for="contact2">Phone</label>
-                        
-                        <br><br>
-                        
-                        <!-- Text box associated with the email label. -->
-                        <input type="text" name="email" id="email" tabindex="4" accesskey="e">
-                        
-                        <br><br>
-                        
-                        <!-- Telephone text box associated with phone number label. -->
-                        <input type="tel" name="phone" id="phone" tabindex="5" accesskey="t">
-                        
-                        <br><br>
-                    
-                        <!-- Datalist input filled with possible reasons for contact. Associated with reason for contact label. -->
-                        <input type="text" name="contactReason" id="contactReason" list="contactReasons" tabindex="6" accesskey="r">
-                        <datalist id="contactReasons">
-                            <option value="information" label="More Information">
-                            <option value="business" label="Business">
-                            <option value="issue" label="Issue with Website">
-                            <option value="other" label="Other Issue">
-                        </datalist>
-                        
-                        <br><br>
-                        
-                        <!-- Text area for user to specify a different reason for contact if they selected other. Associated with the other reason specification label. -->
-                        <textarea name="other" id="other" rows="5" col="50" tabindex="7" accesskey="u"></textarea>
-                    
-                        <br><br>
-                        
-                        <!-- Slider to survey user opinion of site. Associated with opinion label. -->
-                        <span>Very Poor </span><input type="range" name="opinion" id="opinion" min="1" max="100" tabindex="8" accesskey="o"><span> Very High</span>
-                        
-                        <br><br>
-                        
-                        <input type="number" name="visits" id="visits" min="1" max="50" value="1" tabindex="9" accesskey="v">
-                        
-                        <br><br>
-                        
-                        <!-- Submit and clear buttons. -->
-                        <span>
-                            <input type="submit" name="submit" id="submit" tabindex="10" accesskey="s">
-                            <input type="reset" name="reset" id="reset" value="Clear" tabindex="11" accesskey="c">
-                        </span>
-                    </form>
-                </div>
+                        if (document.forms[1].name.value) == ""{
+                            alert("Please fill out the Name field")
+                            name.focus();
+                            return false;
+                            }
+                        }
+                        else{
+                            return true;
+                        }*/
+                </script>
             </main>
 
             <!-- Footer tag -->
