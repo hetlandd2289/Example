@@ -1,0 +1,80 @@
+/*  Auth: Drake Hetland
+	Date: 09/09/2021
+	Desc: This application will calculate the user's weekly wages using
+		  the number of hours and the hourly rate entered by the user.
+
+
+//create module
+module standardPay(float hours, float wage)
+	//multiply and display result
+	display (hours * wage) + " is the standard pay this week."
+end module
+
+//create module
+module overtimePay(float overtime, float wage, float overtimeMultiplier)
+	//multiply and display result
+	display (overtime * wage * overtimeMultiplier) + " is the overtime pay this week."
+end module
+
+//create module
+module totalPay(float hours, float overtime, float wage, float overtimeMultiplier)
+	//multiply and add, then display
+	display (hours * wage) + (overtime * wage * overtimeMultiplier) + " is the total pay this week."
+end module
+
+//create module
+module main()
+	//declare variables
+	declare float hours = 0.0
+	declare float overtime = 0.0
+	declare float wage = 0.0
+	declare float overtimeMultiplier = 1.5
+
+	//get inputs
+	display "Please enter the amount of non-overtime hours worked this week: "
+	input hours
+	display "Please enter the amount of overtime hours worked this week: "
+	input overtime
+	display "Please enter the hourly wage: "
+	input wage
+	
+	//call other modules and calculate
+	call standardPay(hours, wage)
+	call overtimePay(overtime, wage, overtimeMultiplier)
+	call totalPay(hours, overtime, wage, overtimeMultiplier)
+end module
+//LESS EFFIECIENT
+
+
+daclare constant float OT = 1.5
+
+module calculateStandardPay(ref float hours, ref float wage)
+	display "You will be paid: $" + (hours * wage)
+end module
+
+module calculateOT(ref float hours, ref float wage)
+	//declare variables
+	display "Your overtime pay will be: $" + ((hours - 40) * wage * ot)
+end module
+	
+module calculateTotalPay(ref float hours, ref float wage)
+	display "Your total pay will be: $" + ((hours * wage) + ((hours-40) * wage * ot))
+end module
+
+module main()
+	//declare variables
+	declare float hours = 0.0
+	declare float wage = 0.0
+	
+	//get inputs
+	display "Enter your hours worked: "
+	input hours
+	display "Enter your hourly wage: "
+	input wage
+	
+	//call modules
+	call calculateStandardPay(ref hours, ref wage)
+	call calculateOT(ref hours, ref wage)
+	call calculateTotalPay(ref hours, ref wage)
+end module
+//MOST EFFICIENT

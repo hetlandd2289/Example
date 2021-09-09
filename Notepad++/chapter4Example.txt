@@ -1,0 +1,12 @@
+x = true
+y = false
+
+If NOT (x) //if not true -> false
+If NOT (y) //if not false -> true
+
+grade = 75
+If NOT (grade < 60) Then
+	//do stuff
+Else
+	//do other stuff
+End if
