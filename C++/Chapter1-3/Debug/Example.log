@@ -1,5 +1,5 @@
 ﻿  Example.cpp
-H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(28,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(38,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-H:\My Documents\GitHub\Example\C++\Chapter1-3\Debug\Example.exe : fatal error LNK1120: 1 unresolved externals
+H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(19,5): error C3861: 'getCoverage': identifier not found
+H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(20,5): error C3861: 'howMuchPaint': identifier not found
+H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(32,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(42,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
