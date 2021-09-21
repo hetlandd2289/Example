@@ -3,67 +3,69 @@
 // Desc: Simple in class C++ Chapeter 2 Example
 
 #include <iostream>
+#include<iomap>
 using namespace std;
 
 
     
 
     //Chapter 3
-
-void mathStuff() {
-    int choice = -1;
-    while (choice != 0)
-    {
-        cout << "1 - Promotion\n"
-            << "2 - Dmotion\n"
-            
-            << "0 - Quit\n\n";
-
-        cin >> choice;
-
-        if (choice == 1)
+/*
+int main() {
+    void mathStuff() {
+        int choice = -1;
+        while (choice != 0)
         {
-            int x = 3;
-            float y = 5.0;
+            cout << "1 - Promotion\n"
+                << "2 - Dmotion\n"
 
-            cout << "Enter x: ";
-            cin >> x;
+                << "0 - Quit\n\n";
 
-            cout << "Enter y: ";
-            cin >> y;
+            cin >> choice;
 
-            cout << "X * Y = " << (x * y) << endl
-                << "X:" << x << endl
-                << "Y:" << y << endl;
+            if (choice == 1)
+            {
+                int x = 3;
+                float y = 5.0;
+
+                cout << "Enter x: ";
+                cin >> x;
+
+                cout << "Enter y: ";
+                cin >> y;
+
+                cout << "X * Y = " << (x * y) << endl
+                    << "X:" << x << endl
+                    << "Y:" << y << endl;
+            }
+
+            if (choice == 2)
+            {
+                int x = 3;
+                float y = 5.0;
+                int result = 0;
+
+                cout << "Enter x: ";
+                cin >> x;
+
+                cout << "Enter y: ";
+                cin >> y;
+
+                cout << "X * Y = " << (x * y) << endl
+                    << "X:" << x << endl
+                    << "Y:" << y << endl
+                    << "Result: " << result << endl;
+            }
+            cout << endl;
         }
-
-        if (choice == 2)
-        {
-            int x = 3;
-            float y = 5.0;
-            int result = 0;
-
-            cout << "Enter x: ";
-            cin >> x;
-
-            cout << "Enter y: ";
-            cin >> y;
-
-            cout << "X * Y = " << (x * y) << endl
-                << "X:" << x << endl
-                << "Y:" << y << endl
-                << "Result: " << result << endl;
-        }
-        cout << endl;
     }
-}
-
+}*/
 
     
 
 
 
-    /*int main() {
+    int main() {
 
 
                 //Chapter 2
@@ -86,7 +88,7 @@ void mathStuff() {
 
         return 0;
     }
-    */
+    
 
 
         
