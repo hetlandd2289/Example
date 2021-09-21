@@ -1,0 +1,41 @@
+// Auth: Drake Hetland
+// Date: 9/21/2021
+// Exam 1, create an algorithm that calculates and displays a side of a triangle given 2 other sides.
+
+//create decision structure module
+create module decision(float ref side1, float ref side2, float ref hypot)
+	//if-then-else structure to determine what math needs to be done
+	if side1 == 0.0 then
+		display "The missing side of your triangle has the length of " 
+		
+	else if side2 == 0.0 then
+		
+	else
+		
+	end if
+end module
+
+
+end module
+
+//create module main
+module main()
+	//declare variables
+	declare float side1 = 0.0
+	declare float side2 = 0.0
+	declare float hypot = 0.0
+
+	//give instructions
+	display "Enter the lengths of the two sides of the triangle that you know, and the program will tell you the length of the third."
+	
+	//get inputs
+	display "Side 1: "
+	input side1
+	display "Side 2: "
+	input side2
+	display "Hypotenuse: "
+	input hypot
+	
+	//call decision structure module
+	call decision(side1, side2, hypot)
+end module
