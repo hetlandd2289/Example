@@ -1,0 +1,45 @@
+//auth: Drake Hetland
+//date: 9/17/2021
+//desc: Money game, take inputs from the user and see if they add up to 1 dollar
+
+//create module to do math with user inputs
+module math(ref float quarters, ref float dimes, ref float nickels, ref float pennies)
+	//declare new variable to hold value of inputs
+	float money = (quarters * .25) + (dimes * .1) + (nickels * .05) + (pennies * .01)
+	
+	//start decision structure
+	if money == 1.0 then
+		display "You win! You entered 1 dollar!"
+	else if money < 1.0 then
+		display "You entered less than 1 dollar."
+		display "The amount you entered was " + (1.0 - money) + " less than 1 dollar."
+	else
+		display "You entered more than 1 dollar."
+		display "The amount you entered was " + (money - 1.0) + " more than 1 dollar." 
+	end if
+end module
+
+//create main module
+module main()
+	//declare variables
+	declare float quarters = 0.0
+	declare float dimes = 0.0
+	declare float nickels = 0.0
+	declare float pennies = 0.0
+	
+	//give instructions
+	display "Enter a number for each coin. If they add up to 1 dollar, you win!"
+	
+	//get inputs
+	display "quarters: "
+	input quarters
+	display "dimes: "
+	input dimes
+	display "nickels: "
+	input nickels
+	display "pennies: "
+	input pennies
+	
+	//call module
+	call math(quarters, dimes, nickels, pennies)
+end module
