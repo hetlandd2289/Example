@@ -10,17 +10,61 @@
 #include <ctime>
 using namespace std;
 
+void resturantSelector() {
+    //create enumerated data type
+    enum yn{y, n};
+
+    // Delcare variables
+    string ve = "", va = "", gf = "";
+    yn vege = n, vega = n, glut = n;
+
+    cout << "Is anyone in your party a vegetarian? [y/n]: ";
+    cin >> ve;
+    cout << "Is anyone in your party a vegan? [y/n]: ";
+    cin >> va;
+    cout << "Is anyone in your party gluten-free [y/n]: ";
+    cin >> gf;
+}
+
 int main()
 {
-    cout << "Hello World!\n";
-    cout << "How are you doing?" << endl << "Hopefully you are well! \r \\";
-    cout << "\"Weather is poor here\" \a ";
+    int choice = -1;
 
-    return 0;
+    while (choice != 0) {
+        cout << "1 - Tell Joke\n"
+             << "2 - Punchline\n"
+             << "7 - Resturant Selector \n"
+             << "0 - Quit";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3: 
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                resturantSelector();
+                break;
+            case 0:
+                cout << "Have a wonderful day!\n";
+                break;
+            default:
+                cout << "Error 404: Please replace user and try again.";
+        }
+   }
 
     
 }
 
+/*
 int getCoverage() {
     float cov = 0;
 
@@ -47,6 +91,6 @@ void howMuchPaint() {
 
     cout << "You will need " << setprecision(3) << (length * height * 2 / coverage) << " gallons of paint for two coats of paint.\n";
 }
-
+*/
 
 
