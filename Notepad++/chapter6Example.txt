@@ -1,0 +1,70 @@
+declare string name = "Weston Miller"
+
+declare string first, last = split(name, " ")
+
+declare int index = -1
+for (int i = 0; i < name.length; i++)
+	if name[i] == " " then
+		index = i
+		i = name.length
+	end if
+end for
+
+declare string subFirst = substring(name, 0, index -1)
+declare string subLast = substring(name, index + 1, name.length - 1)
+
+#12
+//module to convert random int to a string for display
+module intToString(ref int computerChoice, ref string computerString)
+	select computerChoice
+		case computerChoice == 1
+			set computerString = "rock"
+		case computerChoice == 2
+			set computerString = "paper"
+		case computerChoice == 3
+			set computerString = "scissors"
+		default
+			display "A critical error has occured. Please try again."
+	end select
+end module
+	
+//module to determine who won
+module winner(ref string playerChoice, ref string computerString)
+	display "You chose " + playerChoice + " and the computer chose " + computerString
+	if playerChoice == "rock" && computerString == "paper" then
+		display "You Lose!"
+	else if playerChoice == "rock" && computerString == "scissors" then
+		display "You Win!"
+	else if playerChoice == "rock" && computerString == "rock" then
+		display "You Tied!"
+	else if playerChoice == "paper" && computerString == "rock" then
+		display "You Win!"
+	else if playerChoice == "paper" && computerString == "scissors" then
+		display "You Lose!"
+	else if playerChoice == "paper" && computerString == "paper" then
+		display "You Tied"
+	else if playerChoice == "scissors" && computerString == "rock" then
+		display "You Lose!"
+	else if playerChoice == "scissors" && computerString == "paper" then
+		display "You Win!"
+	else if playerChoice == "scissors" && computerString == "scissors" then
+		display "You Tied!"
+	else
+		display "Please only input rock, paper, or scissors."
+	end if
+end module
+	
+//create main module
+module main()
+	//declare variables 
+	declare int computerChoice = random(1, 4)
+	declare string computerString = ""
+	declare string playerChoice = ""
+	
+	//get input
+	display "Enter what you would like to play: rock, paper, or scissors."
+	input playerChoice
+	
+	call intToString(ref computerChoice, ref computerString)
+	call winner(ref playerChoice, ref computerChoice)
+end module
