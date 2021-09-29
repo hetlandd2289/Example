@@ -1,5 +1,2 @@
 ﻿  Example.cpp
-H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(19,5): error C3861: 'getCoverage': identifier not found
-H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(20,5): error C3861: 'howMuchPaint': identifier not found
-H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(32,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-H:\My Documents\GitHub\Example\C++\Chapter1-3\Example.cpp(42,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Example.vcxproj -> H:\My Documents\GitHub\Example\C++\Chapter1-3\Debug\Example.exe
