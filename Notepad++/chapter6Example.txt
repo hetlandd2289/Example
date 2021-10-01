@@ -14,7 +14,7 @@ declare string subFirst = substring(name, 0, index -1)
 declare string subLast = substring(name, index + 1, name.length - 1)
 
 #12
-//module to convert random int to a string for display
+//module to convert random int to a string for display //////////////////////////////////////////////////////////////////////// module should be converted to a function, and return the value needed to each string that needs it /////////////////////////////////////
 module intToString(ref int computerChoice, ref string computerString)
 	select computerChoice
 		case computerChoice == 1
@@ -30,7 +30,7 @@ end module
 	
 //module to determine who won
 module winner(ref string playerChoice, ref string computerString)
-	display "You chose " + playerChoice + " and the computer chose " + computerString
+	display "You chose " + playerChoice + " and the computer chose " + computerString /////////////////////////////////////////////// or statements can make it so that only one if is needed for each outcome(win, loss, tie)//////////////////////////////////////////
 	if playerChoice == "rock" && computerString == "paper" then
 		display "You Lose!"
 	else if playerChoice == "rock" && computerString == "scissors" then
@@ -47,7 +47,7 @@ module winner(ref string playerChoice, ref string computerString)
 		display "You Lose!"
 	else if playerChoice == "scissors" && computerString == "paper" then
 		display "You Win!"
-	else if playerChoice == "scissors" && computerString == "scissors" then
+	else if playerChoice == "scissors" && computerString == "scissors" then /////////////////////////////////////////////////// after ties, call main again ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		display "You Tied!"
 	else
 		display "Please only input rock, paper, or scissors."
@@ -58,12 +58,14 @@ end module
 module main()
 	//declare variables 
 	declare int computerChoice = random(1, 4)
-	declare string computerString = ""
-	declare string playerChoice = ""
+	declare string computerString = "" /////////////////////// not neccessary with function //////////////////////////
+	declare string playerChoice = "" ///////////////////////// can be an int because with computers result and winner, your coice is implicit ////////////////////////////
 	
 	//get input
-	display "Enter what you would like to play: rock, paper, or scissors."
-	input playerChoice
+	while player choice != 0
+		display "Enter what you would like to play: rock, paper, or scissors." ////////////////////// display another line that offers a 0 to exit the while loop //////////////////////
+		input playerChoice
+	end while
 	
 	call intToString(ref computerChoice, ref computerString)
 	call winner(ref playerChoice, ref computerChoice)

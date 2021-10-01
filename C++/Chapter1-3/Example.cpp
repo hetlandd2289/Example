@@ -8,6 +8,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 using namespace std;
 
 void resturantSelector() {
@@ -51,6 +52,41 @@ void resturantSelector() {
     }
 }
 
+void outToFile(string name, string str) {
+    ofstream outFile(name); //open
+    if (outFile) {
+        outFile << "We are writing to the file."; //manipulate
+        outFile.close(); //close
+    }
+    else {
+        cout << "Invalid File.\n"
+    }
+}
+
+void inFromFile(string name) {
+    ifstream inFile("example.txt"); //open
+
+    if (inFile) {
+        string fileInfo;
+
+        getline(inFile, fileInfo) //display
+            cout << fileInfo;
+
+        inFile.close(); //close
+    }
+    else {
+        cout << "Invalid File.\n"
+    }
+}
+
+void fileStuffs() {
+    
+    outToFile("example.txt", "We are writting to the file");
+
+    inFromFile("example.txt")
+    
+}
+
 int main()
 {
     int choice = -1;
@@ -78,6 +114,9 @@ int main()
                 break;
             case 7:
                 resturantSelector();
+                break;
+            case 8:
+                fileStuffs();
                 break;
             case 0:
                 cout << "Have a wonderful day!\n";
