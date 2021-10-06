@@ -1,0 +1,65 @@
+// declare variables
+declare int pizzaSize[5]
+declare int size = 15
+
+for (Int index = 0; index < length(pizzaSize); index++)
+	set pizzaSize[index] = size
+		size += 10
+end for
+
+// [15, 25, 35, 45, 55]
+
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+
+module highest(ref int arr[], ref int SIZE)
+declare int highest = arr[0] //set equal to first value in array
+	
+	// iterate through the array to find the highest value
+	for (int index = 0; index < SIZE; index++)
+		if arr[index] > highest then
+			set highest = arr[index]
+		end if
+	end for
+	
+	display "The highest value is: " + highest
+end module
+
+module lowest(ref int [arr], ref int SIZE)
+declare int lowest = arr[0] //set equal to first value in array
+	
+	// iterate through the array to find the lowest value
+	for (int index = 0; index < SIZE; index++)
+		if arr[index] < lowest then
+			set lowest = arr[index]
+		end if
+	end for
+	
+	display "The lowest value is: " + lowest
+end module
+
+module main()
+	// declare variables
+	declare constant int SIZE = 5
+	declare int arr[SIZE] = 5, 20, 7, 97, 42
+	
+	call highest(ref arr, ref SIZE)
+	call lowest (ref arr, ref size
+end module
+
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+#2 Chapter 8
+
+Module main()
+	declare constant int SIZE = 7
+	declare int ticket[SIZE]
+	
+	for (int index = 0; index < SIZE; index ++)
+		set ticket[index] = random(0, 9)
+	end for
+	
+	for each num in ticket
+		display "Number: " + num
+	end for each
+end module

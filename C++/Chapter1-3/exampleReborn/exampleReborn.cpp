@@ -11,6 +11,9 @@
 #include <fstream>
 using namespace std;
 
+//Prototypes
+
+
 void resturantSelector() {
 
     // Delcare variables
@@ -59,7 +62,7 @@ void outToFile(string name, string str) {
         outFile.close(); //close
     }
     else {
-        cout << "Invalid File.\n"
+        cout << "Invalid File.\n";
     }
 }
 
@@ -69,67 +72,24 @@ void inFromFile(string name) {
     if (inFile) {
         string fileInfo;
 
-        getline(inFile, fileInfo) //display
+        getline(inFile, fileInfo); //display
             cout << fileInfo;
 
         inFile.close(); //close
     }
     else {
-        cout << "Invalid File.\n"
+        cout << "Invalid File.\n";
     }
 }
 
 void fileStuffs() {
 
-    outToFile("example.txt", "We are writting to the file");
+    outToFile("example.txt", "We are writting to the file \n");
 
-    inFromFile("example.txt")
-
-}
-
-int main()
-{
-    int choice = -1;
-    string str;
-
-    while (choice != 0) {
-        cout << "1 - Tell Joke\n"
-            << "2 - Punchline\n"
-            << "7 - Resturant Selector\n"
-            << "0 - Quit\n";
-        cin >> choice;
-
-        switch (choice) {
-        case 1: cout << "Haha just kidding no joke";
-            break;
-        case 2: cout << "Bruh I said there was no joke";
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
-        case 5:
-            break;
-        case 6:
-            break;
-        case 7:
-            resturantSelector();
-            break;
-        case 8:
-            fileStuffs();
-            break;
-        case 0:
-            cout << "Have a wonderful day!\n";
-            break;
-        default:
-            cout << "Error 404: Please replace user and try again.";
-        }
-    }
-
+    inFromFile("example.txt ");
 
 }
 
-/*
 int getCoverage() {
     float cov = 0;
 
@@ -156,4 +116,85 @@ void howMuchPaint() {
 
     cout << "You will need " << setprecision(3) << (length * height * 2 / coverage) << " gallons of paint for two coats of paint.\n";
 }
-*/
+
+void tempConvert() {
+    // Declare variables
+    float temp = 0.0;
+    int choice = -1;
+
+    do {
+        cout << "1 - Convert C to F\n"
+            << "2 - Convert F to C\n"
+            << "0 - Quit\n";
+        cin >> choice;
+
+        switch (choice) {
+        case 1:
+            cout << "Enter the Celsius temperature: ";
+            cin >> temp;
+
+            cout << temp << "C is " << (temp * (9.0/5.0) + 32.0) << "F.\n";
+            break;
+        case 2:
+            cout << "Enter the Fahrenheit temperature: ";
+            cin >> temp;
+
+            cout << temp << " is " << ((5.0 / 9.0) * (temp - 32.0)) << "F.\n";
+            break;
+        case 0:
+            break;
+        default:
+            break;
+        }
+    } while (choice != 0);
+}
+
+int main()
+{
+    int choice = -1;
+    string str;
+
+    while (choice != 0) {
+        cout << "\n1 - Tell Joke\n"
+            << "2 - Punchline\n"
+            << "3 - Get Coverage\n"
+            << "7 - Resturant Selector\n"
+            << "8 - File Stuffs\n"
+            << "9 - Temperature Converter\n"
+            << "0 - Quit\n";
+        cin >> choice;
+
+        switch (choice) {
+        case 1: cout << "Haha just kidding no joke";
+            break;
+        case 2: cout << "Bruh I said there was no joke";
+            break;
+        case 3: 
+            howMuchPaint();
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+        case 7:
+            resturantSelector();
+            break;
+        case 8:
+            fileStuffs();
+            break;
+        case 9:
+            tempConvert();
+            break;
+        case 0:
+            cout << "Have a wonderful day!\n";
+            break;
+        default:
+            cout << "Error 404: Please replace user and try again.";
+        }
+    }
+}
+
+
+
