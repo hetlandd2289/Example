@@ -1,0 +1,55 @@
+// Auth: Drake Hetland
+// Date: 9/21/2021
+// Exam 1, create an algorithm that calculates and displays a side of a triangle given 2 other sides.
+
+//create decision structure module
+create module decision(float ref side1, float ref side2, float ref hypot)
+	//nested if else structure to validate user input before continuing to the math portion
+	if (side1 < 0.0 OR side2 < 0.0 OR hypot < 0.0) then
+		display "Please enter only positive numbers."
+		
+	else
+		//if-then-else structure to determine what math needs to be done
+		if side1 == 0.0 then
+			set side1 = hypot^2 - side2^2
+			display "The missing side of your triangle has the length of: " + (SQRT side1)
+			
+		else if side2 == 0.0 then
+			set side2 = hypot^2 - side1^2
+			display "The missing side of your triangle has the length of: " + (SQRT side2)
+			
+		else if hypot == 0.0 then
+			set hypot = side1^2 + side2^2
+			display "The missing side of your triangle has the length of: " + (SQRT hypot)
+			
+		else
+			display "Please enter a zero in the field you wish to solve for."
+			
+		end if
+	end if
+end module
+
+//create module main
+module main()
+	//declare variables
+	declare float side1 = 0.0
+	declare float side2 = 0.0
+	declare float hypot = 0.0
+
+	//give instructions
+	display "Enter the lengths of the two sides of the triangle that you know. Enter a 0 in the field you wish to solve for, and the program will tell you its length."
+	
+	//get inputs
+	display "Side 1: "
+	input side1
+	display "Side 2: "
+	input side2
+	display "Hypotenuse: "
+	input hypot
+	
+	//call decision structure module
+	call decision(side1, side2, hypot)
+	
+	//set varibles back to 0.0
+	set side1, side2, hypot = 0.0
+end module

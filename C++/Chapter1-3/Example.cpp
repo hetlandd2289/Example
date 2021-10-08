@@ -16,11 +16,27 @@ int main()
     cout << "How are you doing?" << endl << "Hopefully you are well! \r \\";
     cout << "\"Weather is poor here\" \a ";
 
-    return 0;
+    int b = 0;
+    int a = 0;
+    int c = 0;
 
+    cin >> a;
+    cin >> b;
+    cin >> c;
+
+    if (a == 0 and b == 0 and c == 0) {
+        cout << "bruh";
+    }
+    else if (a < 0 or b < 0 or c < 0) {
+        cout << "cringe";
+    }
+    else {
+        cout << "nice";
+    }
+    
     
 }
-
+/*
 int getCoverage() {
     float cov = 0;
 
@@ -46,7 +62,7 @@ void howMuchPaint() {
     cin >> length;
 
     cout << "You will need " << setprecision(3) << (length * height * 2 / coverage) << " gallons of paint for two coats of paint.\n";
-}
+}*/
 
 
 

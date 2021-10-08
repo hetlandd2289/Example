@@ -1,0 +1,3 @@
+﻿  exam1Practical.cpp
+C:\Users\Drake-PC\source\repos\exam1Practical\exam1Practical.cpp(20,16): warning C4244: '=': conversion from 'time_t' to 'unsigned int', possible loss of data
+  exam1Practical.vcxproj -> C:\Users\Drake-PC\source\repos\exam1Practical\Debug\exam1Practical.exe
