@@ -1,0 +1,99 @@
+// Auth: Drake Hetland
+// Date: 9/21/2021
+// Exam 1, create an algorithm that calculates and displays a side of a triangle given 2 other sides.
+
+//create decision structure module
+create module decision(float ref side1, float ref side2, float ref hypot)
+	//if-then-else structure to determine what math needs to be done
+	if side1 == 0.0 then
+		set side1 = hypot^2 - side2^2
+		display "The missing side of your triangle has the length of: " + (SQRT side1)
+		
+	else if side2 == 0.0 then
+		set side2 = hypot^2 - side1^2
+		display "The missing side of your triangle has the length of: " + (SQRT side2)
+		
+	else
+		set hypot = side1^2 + side2^2
+		display "The missing side of your triangle has the length of: " + (SQRT hypot)
+		
+	end if
+end module
+
+//create module main
+module main()
+	//declare variables
+	declare float side1 = 0.0
+	declare float side2 = 0.0
+	declare float hypot = 0.0
+
+	//give instructions
+	display "Enter the lengths of the two sides of the triangle that you know, leaving the unknown blank, and the program will tell you the length of the third."
+	
+	//get inputs
+	display "Side 1: "
+	input side1
+	display "Side 2: "
+	input side2
+	display "Hypotenuse: "
+	input hypot
+	
+	//call decision structure module
+	call decision(side1, side2, hypot)
+	
+	//set varibles back to 0.0
+	set side1, side2, hypot = 0.0
+end module
+
+////////////////////////////////////////////////////////////////////////////////////in class example of exam 1///////////////////////////////////////////////////////////////////////////////////////
+
+module getherInput(ref float a, ref float b, ref float c)
+	display "Please enter the following lengths of the triangle: "
+	display "Note: Please enter 0 if the side is the unknown."
+	
+	display "Length of side A: "
+	input a
+	display "Length of side B: "
+	input b
+	display "Length of side C: "
+	input c
+end module
+
+module validateInput(ref float a, ref float b, ref float c, ref bool valid)
+	if (a < 0 || b < 0 || c < 0)
+		display "Invalid input. Please enter positive numbers"
+		
+	else if (a== 0 && b == 0 || a == 0 && c == 0 || b == 0 && c == 0)
+		display "Only one side may be unknown."
+		
+	else
+		valid = true
+	end if
+end module
+
+module pythagoreanTheorem(ref float A, ref float B, ref float C)
+	if (a != 0 && b != 0)
+		display "The length of side C = " + (Math.sqrt(a*a + b*b))
+	else if (a != 0 && c != 0)
+		display "The length of side B = " + (Math.sqrt(c*c - a*a))
+	else if (b != 0 && c != 0)
+		display "The length of side A = " + (Math.sqrt(c*c - b*b))
+	else
+		Display "Error: An issue occured. Please replace the user and try again."
+	end if
+end module
+
+module main()
+	//declare variables
+	declare float sideA = 0.0
+	declare float sideB = 0.0
+	declare float sideC = 0.0
+	declare bool isValid = false
+	
+	While !(isValid)
+		call gatherInput(ref sideA, ref sideB, ref sideC)
+		call calidateInput(ref sideA, ref sideB, ref sideC, ref isValid)
+	end while
+	
+	call pythagoreanTheorem(ref sideA, ref sideB, ref sideC)
+end module

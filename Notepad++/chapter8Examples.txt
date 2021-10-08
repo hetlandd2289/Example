@@ -1,0 +1,167 @@
+// declare variables
+declare int pizzaSize[5]
+declare int size = 15
+
+for (Int index = 0; index < length(pizzaSize); index++)
+	set pizzaSize[index] = size
+		size += 10
+end for
+
+// [15, 25, 35, 45, 55]
+
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+
+module highest(ref int arr[], ref int SIZE)
+declare int highest = arr[0] //set equal to first value in array
+	
+	// iterate through the array to find the highest value
+	for (int index = 0; index < SIZE; index++)
+		if arr[index] > highest then
+			set highest = arr[index]
+		end if
+	end for
+	
+	display "The highest value is: " + highest
+end module
+
+module lowest(ref int [arr], ref int SIZE)
+declare int lowest = arr[0] //set equal to first value in array
+	
+	// iterate through the array to find the lowest value
+	for (int index = 0; index < SIZE; index++)
+		if arr[index] < lowest then
+			set lowest = arr[index]
+		end if
+	end for
+	
+	display "The lowest value is: " + lowest
+end module
+
+module main()
+	// declare variables
+	declare constant int SIZE = 5
+	declare int arr[SIZE] = 5, 20, 7, 97, 42
+	
+	call highest(ref arr, ref SIZE)
+	call lowest (ref arr, ref SIZE)
+end module
+
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+#2 Chapter 8
+
+Module main()
+	declare constant int SIZE = 7
+	declare int ticket[SIZE]
+	
+	for (int index = 0; index < SIZE; index ++)
+		set ticket[index] = random(0, 9)
+	end for
+	
+	for each num in ticket
+		display "Number: " + num
+	end for each
+end module
+
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+#10 Chapter 8
+
+module setValues(ref int saddle[], ref int ROWS, ref int COLS)
+	for (int index = 0; index < ROWS; index ++)
+		set saddle[index] = random(0, 9)
+		for (int index = 0; index < COLS; index ++)
+			set saddle[index] = random(0, 9)
+		end for
+	end for
+end module
+
+module checkPoints(ref int saddle[], ref int ROWS, ref int COLS, ref int points)
+	declare int sP = saddle[0][0]
+	
+	
+end module
+
+module main()
+	//declare constants for bounds of array
+	declare constant int ROWS = 7
+	declare constant int COLS = 7
+	
+	//create two dimensional array
+	declare int saddle[ROWS][COLS]
+	
+	//variable to hold points
+	declare int points = 0
+	
+	call setValues(ref saddle, ref ROWS, ref COLS) 
+	call checkPoints(ref saddle, ref ROWS, ref COLS, ref points)
+end module
+	
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+module fillArray(ref int sp[][]), ref int rows, ref int cols)
+	for (int r = 0; r < rows; r++)
+		for (int c = 0; c < cols; c++)
+			set sp[r][c] = random(0, 999)
+	end for
+end module
+
+///////////////////////////////
+// for each r in sp			  /
+	for each c in r			  /
+		set c = random(0, 999)/ alternate way to do it
+	end for each			  /
+// end for each				  /
+///////////////////////////////
+
+module fillArray(ref int sp[][]), ref int rows, ref int cols)
+	// declare variable
+	declare int lowest[7] = [-1, -1, -1, -1, -1, -1, -1]
+	declare int saddle[49]
+	
+	// loop
+	for (int r = 0; r < rows; r++)
+		set index = 0
+		set lowest = [-1, -1, -1, -1, -1, -1, -1]
+		set lowest[index] = sp[r][0]
+		
+		for (int c = 0; c < rows; c++)
+			if sp[r][c] < lowest[index] then
+				lowest[index] = c
+			else if sp[r][c] == lowest[index] then
+				set index += 1
+				set lowest[index] = c
+			end if
+		end for
+		
+		for (int n = 0; n < 7; n++)
+			if lowest[n] != -1 then
+				for (int v = 0; v < 7; v++)
+					if sp[r][lowest[n]] < sp[v][lowest[n]] then
+						set lowest[n] = -1 
+						break for
+					end if
+				end for
+				if lowest[n] != -1 then
+					set saddle.append(sp[r][lowest[n]])
+				end if
+			end if
+		end for
+	end for
+	for each s in saddle
+		display s
+	end for each
+end module
+
+module main()
+	//declare variables
+	declare constant int ROWS = 7, COLS = 7
+	declare in sp[ROWS][COLS]
+	
+	// fill the array
+	call fillArray(ref sp, ref ROWS, ref COLS)
+	
+	// find saddle points
+	call findSP(ref sp, ref ROWS, ref COLS)
+end module

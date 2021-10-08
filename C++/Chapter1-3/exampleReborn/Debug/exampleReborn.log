@@ -1,0 +1,4 @@
+﻿  exampleReborn.cpp
+H:\My Documents\GitHub\Example\C++\Chapter1-3\exampleReborn\exampleReborn.cpp(100,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+H:\My Documents\GitHub\Example\C++\Chapter1-3\exampleReborn\exampleReborn.cpp(110,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  exampleReborn.vcxproj -> H:\My Documents\GitHub\Example\C++\Chapter1-3\exampleReborn\Debug\exampleReborn.exe
