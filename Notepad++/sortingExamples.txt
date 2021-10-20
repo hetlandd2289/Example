@@ -1,0 +1,39 @@
+//Sorted Golf Scores
+//Bubble sort
+
+module swap(ref int scores[], ref int index)
+	declare int temp = scores[index + 1]
+	
+	set scores[index + 1] = scores[index]
+	set scores[index] = temp
+end module
+
+module bubbleSort(ref int scores[], ref int size)
+	declare int maxElement = 0
+	declare int index = 0
+	
+	for (maxElement; maxElement < size - 1; maxElement++)
+		for (index = maxElement; index >= 0; index--)
+			if scores[index] > scores[index + 1] then
+				call swap(ref scores[], ref index)
+			end if
+		end for
+	end for
+end module
+
+module main()
+	declare constant int SIZE = 10
+	declare int scores[SIZE]
+	declare int scoreInput
+	
+	for (int s = 0; s < SIZE; s++)
+		display "Enter a score: "
+		input scores[s]
+	end for
+	
+	call bubbleSort(ref scores, ref SIZE)
+
+	for each score in scores
+		display score
+	end for each
+end module
