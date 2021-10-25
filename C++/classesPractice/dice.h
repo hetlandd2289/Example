@@ -2,35 +2,35 @@
 #include <cstdlib>
 #include <iostream>
 
-class die {
+class Die {
 private: 
 	int sides;
 	int currentRoll;
 	int previousRoll;
 
 public: 
-	void getSides() {
+	int getSides() {
 		return sides;
 	}
-	void getCurrentRoll() {
+	int getCurrentRoll() {
 		return currentRoll;
 	}
-	void getPreviousRoll() {
+	int getPreviousRoll() {
 		return previousRoll;
 	}
 
 	//Mutators
-	int setSides(int s) {
+	void setSides(int s) {
 		if (s > 0) {
 			sides = s;
 		}
 	}
-	int setCurrentRoll(int r) {
+	void setCurrentRoll(int r) {
 		if (r > 0 && r < sides) {
 			currentRoll = r;
 		}
 	}
-	int setPreviousRoll(int r) {
+	void setPreviousRoll(int r) {
 		if (r > 0 && r < sides) {
 			previousRoll = r;
 		}
@@ -46,8 +46,8 @@ public:
 	int roll() {
 		srand(time(NULL));
 		setPreviousRoll(currentRoll);
-		setCurrentRoll(rand % (sides + 1) + 1);
+		setCurrentRoll(rand() % (sides + 1));
 		
-		getCurrentRoll();
+		return getCurrentRoll();
 	}
 };

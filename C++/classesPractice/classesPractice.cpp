@@ -5,9 +5,33 @@
 #include "goblin_class.h"
 #include "dice.h"
 
+using namespace std;
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    Goblin goblin, sraukk("Sraukk, Goblin Beast of the West", 7, 3, 2);
+    Die d4(4), d6, d8(8);
+    string uInput;
+
+    cout << "Name: " << goblin.getName()
+        << "\nHP: " << goblin.getHP()
+        << "\nAttack: " << goblin.getAttack()
+        << "\nDefence: " << goblin.getDef() << endl;
+
+    cout << "\nEnter new name: ";
+    getline(cin, uInput);
+    sraukk.setName(uInput);
+    //cout << "\nNew Name: " << goblin.getName();
+
+    cout << "\nName: " << sraukk.getName()
+        << "\nHP: " << sraukk.getHP()
+        << "\nAttack: " << sraukk.getAttack()
+        << "\nDefence: " << sraukk.getDef();
+
+    
+    cout << "\nRoll d4: " << d4.roll()
+        << "\nRoll d6: " << d6.roll()
+        << "\nRoll d8: " << d8.roll();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

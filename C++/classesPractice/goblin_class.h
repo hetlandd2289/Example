@@ -26,11 +26,11 @@ public:
 	{
 		return HP;
 	}
-	int attack()
+	int getAttack()
 	{
 		return attack;
 	}
-	int def()
+	int getDef()
 	{
 		return def;
 	}
@@ -90,13 +90,13 @@ private:
 	}
 	void dead()
 	{
-		cout << nName << " died."
+		cout << name << " died.";
 	}
 
 public:
 	void provoke()
 	{
-		if (angry = false)
+		if (angry == false)
 			screech();
 		else
 			stab();
