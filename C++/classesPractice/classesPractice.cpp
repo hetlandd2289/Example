@@ -7,9 +7,13 @@
 
 using namespace std;
 
+//prototypes
+Goblin newGoblin();
+
 int main()
 {
-    Goblin goblin, sraukk("Sraukk, Goblin Beast of the West", 7, 3, 2);
+    Goblin goblin = newGoblin();
+    Goblin sraukk("Sraukk, Goblin Beast of the West", 7, 3, 2);
     Die d4(4), d6, d8(8);
     string uInput;
 
@@ -32,6 +36,36 @@ int main()
     cout << "\nRoll d4: " << d4.roll()
         << "\nRoll d6: " << d6.roll()
         << "\nRoll d8: " << d8.roll();
+}
+
+Goblin newGoblin()
+{
+    //declare variables
+    
+    string name;
+    int HP;
+    int attack;
+    int def;
+
+    cout << "\nEnter goblin's name: ";
+    cin >> name;
+    cout << "\nEnter " << name << "'s HP: ";
+    cin >> HP;
+    cout << "\nEnter " << name << "'s attack: ";
+    cin >> attack;
+    cout << "\nEnter " << name << "'s defence: ";
+    cin >> def;
+
+    //create the goblin
+    Goblin g(name, HP, attack, def);
+
+    return g;
+    
+    /* less efficient
+    g.setName(name);
+    g.setHP(HP);
+    g.setAttack(attack);
+    g.setDef(def);*/
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
