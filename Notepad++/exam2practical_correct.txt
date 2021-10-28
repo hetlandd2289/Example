@@ -1,0 +1,224 @@
+//Auth: Drake Hetland
+//Date: 10/12/2021
+//Desc: Lo Shu Magic Square game using loops and 2-dimensional array
+
+//create validate function
+function int validate(ref int loShu[][], ref int ROWS, ref int COLS, ref int number)
+	//counter variables
+	declare int r = 0
+	declare int c = 0
+	
+	//variable to hold the return value
+	declare int pass = 1
+	
+	//for loop checks against all values in array for a duplicate of user's input
+	for r = 0 to ROWS - 1
+		for c = 0 to COLS - 1
+			if (number == loShu[r][c])
+				set pass = 0
+			end if
+		end for
+	end for
+	
+	//if there is a duplicate, returns 0, else returns 1 and breaks loop that calls function
+	return pass
+end function
+
+//create finish function
+function int finish(ref int loShu[][], ref int ROWS, ref int COLS)
+	//counter variables
+	declare int r = 0
+	declare int c = 0
+	
+	//condition control variable
+	declare int pass = 1
+	
+	//variable to be returned
+	declare int finished = 0
+	
+	//for loop to check if any values at any locations are still equal to 0/unplayed
+	for r = 0 to ROWS - 1
+		for c = 0 to COLS - 1
+			if (loShu[r][c] == 0)
+				set pass = 0
+			end if
+		end for
+	end for
+	
+	//if no spots are left unplayed, code below executes
+	if (pass == 1)
+		//variables for the sum of each row/col/diagonal
+		declare int r0 = loShu[0][0] + loShu[0][1] + loShu[0][2]
+		declare int r1 = loShu[1][0] + loShu[1][1] + loShu[1][2]
+		declare int r2 = loShu[0][0] + loShu[0][1] + loShu[0][2]
+		declare int c0 = loShu[1][0] + loShu[1][1] + loShu[1][2]
+		declare int c1 = loShu[0][0] + loShu[0][1] + loShu[0][2]
+		declare int c2 = loShu[1][0] + loShu[1][1] + loShu[1][2]
+		declare int d0 = loShu[0][0] + loShu[0][1] + loShu[0][2]
+		declare int d1 = loShu[1][0] + loShu[1][1] + loShu[1][2]
+		
+		//if the sum of each row/col/diaginal is the same, display a victory message and end the game
+		if (r0 == r1 AND r1 == r2 AND r2 == c0 AND c0 == c1 AND c1 == c2 AND c2 == d0 AND d0 == d1)
+			display "You have created a Lo Shu Magic Square!"
+			set finished = 1
+		//else display loss message and end game
+		else
+			display "This is not a Lo Shu Magic Square."
+			set finished = 1
+		end if
+	end if
+	
+	//return function for game loop
+	return finished
+end function
+
+//create game module
+module game(ref int loShu[][], ref int ROWS, ref int COLS)
+	while (finish(ref loShu, ref ROWS, ref COLS) == 0)
+		//varibles used to store user input
+		declare int row = 0
+		declare int col = 0
+		declare int number = 0
+		
+		//input and input validation for selecting the array element to alter
+		display "Enter the coordinates of the square you wish to fill(row, col): "
+		input row
+		input col
+		while (row < 1 OR row > 3 OR col < 1 OR row > 3)
+			display "Please only enter numbers 1 through 3."
+			input row
+			set row = row - 1
+			input col
+			set col = col - 1
+		end while
+		
+		//input and input validation for the number to be stored in array
+		display "Enter the number you wish to put in this space: "
+		input nubmer
+		while (number < 1 OR number > 9)
+			display "Please only enter numbers 1 through 9."
+			input number
+		end while
+		
+		//runs validate function to make sure number hasn't been used already
+		while (validate(ref loShu, ref ROWS, ref COLS, ref nubmer) == 0)
+			display "You have already used this number elsewhere."
+			display "Please enter a new value: "
+			input number
+		end while
+		
+		//finally sets the the value at location equal to number
+		set loShu[row][col] = number
+	end while
+end module
+
+//create main module
+module main()
+	//declare array size
+	declare constant int ROWS = 3
+	declare constant int COLS = 3
+	
+	//declare array
+	declare int loShu[ROWS][COLS] = 0, 0, 0, 0, 0, 0, 0, 0, 0
+	
+	//give instructions
+	display "Enter a location on the board, and the number you wish to place there."
+	display "Each nubmer can only be played once."
+	display "When all spaces have been filled, the program will tell you if you created a Lo Shu Magic Square."
+	
+	//call game module
+	call game(ref loShu, ref ROWS, ref COLS)
+end module
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+module fillTable(ref int magicSquare[][], ref int rows, ref int cols)
+	declare bool finished = false
+	declare bool invalid
+	
+	do 
+		for int r = 0; r < rows; r ++
+			for (int c = 0; < c < cols; c++)
+				display "Enter a number between 1 and 9."
+				input magicSquare[r][c]
+				
+				//validate input
+				do
+					set invalid = false
+					if magicSquare[r][c] > 0 AND magicSquare < 10 then
+						for each row in magicSquare
+							for col in row
+								if col == magicSquare[r][c]
+									display "Invalid entry - the number is already in the table!"
+									input magicSquare[r][c]
+									set invalid = true
+									break for each for each
+								end if
+								
+							end for each
+						end for each
+						
+					else 
+						display "The number must be between 1 and 9."
+						input magic square at [r][c]
+						set invalid = true
+					end if
+				while invalid = true
+				
+				if (r == 2 && c == 2)
+					set finished = true
+				end if
+			end for
+		end for
+	while not finished
+end module
+
+function bool checkIfMagic(ref int magicSquare[][], ref int rows, ref int cols)
+	//declare variable
+	declare sum == magicSquare[0][0] + magicSquare[0][1] + magicSquare[0][2]
+	
+	//check row sums
+	if (magicSquare[1][0] + magicSquare[1][1] + magicSquare[1][2] == sum)
+		display "This is not a magic square!"
+		return false
+	end if
+	if (magicSquare[2][0] + magicSquare[2][1] + magicSquare[2][2] == sum)
+		display "This is not a magic square!"
+		return false
+	end if
+	//check col sums
+	if (magicSquare[0][0] + magicSquare[1][0] + magicSquare[2][0] == sum)
+		display "This is not a magic square!"
+		return false
+	end if
+	if (magicSquare[0][1] + magicSquare[1][1] + magicSquare[2][1] == sum)
+		display "This is not a magic square!"
+		return false
+	end if
+	if (magicSquare[0][2] + magicSquare[1][2] + magicSquare[2][2] == sum)
+		display "This is not a magic square!"
+		return false
+	end if
+	//check diag sums
+	if (magicSquare[0][0] + magicSquare[1][1] + magicSquare[2][2] == sum)
+		display "This is not a magic square!"
+		return false
+	end if
+	if (magicSquare[0][2] + magicSquare[1][1] + magicSquare[2][0] == sum)
+		display "This is not a magic square!"
+		return false
+	end if
+	
+	display "The square is magic!"
+	return true
+end module
+
+module main()
+	//declare variables
+	declare constant int ROWS = 3
+	declare constant int COLS = 3
+	declare int magicSquare[ROWS][COLS]
+	
+	call fillTable(ref magicSquare, ref ROWS, ref COLS)
+	call checkIfMagic(ref magicSquare, ref ROWS, ref COLS)
+end module

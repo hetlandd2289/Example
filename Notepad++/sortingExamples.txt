@@ -1,0 +1,111 @@
+//Sorted Golf Scores
+//Bubble sort
+
+module swap(ref int scores[], ref int index, ref int next)
+	declare int temp = scores[next]
+	
+	set scores[next] = scores[index]
+	set scores[index] = temp
+end module
+
+module bubbleSort(ref int scores[], ref int size)
+	declare int maxElement = 0
+	declare int index = 0
+	
+	for (maxElement; maxElement < size - 1; maxElement++)
+		for (index = maxElement; index >= 0; index--)
+			if scores[index] > scores[index + 1] then
+				call swap(ref scores[], ref index, ref index+1)
+			end if
+		end for
+	end for
+end module
+
+//scores -> [5, 7, 3, 10, 2, 0, 1, -2, -5]
+//ENTER LOOP
+//index 		-> 2 (3)
+//minIndex 		-> 0 (5)
+//currentIndex 	-> 0 (5)
+
+module selectionSort(ref int scores[], ref int size)
+	//declare variables
+	declare int index
+	declare int minIndex
+	declare int currentIndex
+	
+	//start iterating
+	for (currentIndex = 0; currentIndex <= size - 2; currentIndex++)
+		set minIndex = currentIndex
+		for (index = currentIndex; index <= size - 1; index++) then
+			if scores[index] < scores[minIndex]
+				set minIndex = index
+			end if
+		end for
+		if (currentIndex != minIndex) then
+			call swap(ref scores[], ref currentIndex, ref minIndex)
+		end if
+	end for
+end module
+
+//Insertion Sort
+module insertionSort(ref int scores[], ref int size)
+	//declare variables
+	declare int index
+	declare int scan
+	declare int unsortedValue
+	
+	//start sorting 
+	for (index = 1; index < size; index++)
+		set unsortedValue = scores[index]
+		set scan = index
+		
+		while (scan > 0 AND scores[scan - 1] > unsortedValue)
+			set scores[scan] = scores[scan - 1]
+			set scan--
+		end while
+		
+		set scores[scan] = unsortedValue
+	end for
+end module
+
+//binary search
+module binarySearch(ref int arr[], ref int size, ref int targetValue)
+	//declare variables
+	declare int first = 0
+	declare int last = size - 1
+	declare int middle
+	declare int targetIndex = -1
+	declare bool found = false
+
+	while (!found) AND (first <= last)
+		set middle = (first + last) / 2
+		
+		if (arr[middle] < targetValue)
+			set first = middle + 1
+		else if (arr[index] > targetValue)
+			set last = middle - 1
+		else
+			set found = true
+			set targetIndex = middle
+		end if
+	end while
+	
+	return targetIndex
+end module
+
+module main()
+	declare constant int SIZE = 10
+	declare int scores[SIZE]
+	declare int scoreInput
+	
+	for (int s = 0; s < SIZE; s++)
+		display "Enter a score: "
+		input scores[s]
+	end for
+	
+	call bubbleSort(ref scores, ref SIZE)
+
+	for each score in scores
+		display score
+	end for each
+end module

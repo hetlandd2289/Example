@@ -1,0 +1,4 @@
+﻿  classesPractice.cpp
+H:\My Documents\GitHub\Example\C++\classesPractice\goblin_class.h(84,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+H:\My Documents\GitHub\Example\C++\classesPractice\dice.h(47,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  classesPractice.vcxproj -> H:\My Documents\GitHub\Example\C++\classesPractice\Debug\classesPractice.exe
