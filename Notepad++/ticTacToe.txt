@@ -1,0 +1,129 @@
+Auth: Drake Hetland
+Date: 10/10/2021
+Desc: Tic-Tac-Toe game using a two-dimensional array.
+
+//module that loops the game
+module game(ref int ticTacToe, ref int ROWS, ref int COLS)
+	
+	//int values to store location on board
+	declare int row = 0
+	declare int col = 0
+	
+	//boolean value to control the game loop
+	declare bool over = false
+	
+	//counter variable, tells loop to stop at 9 plays if there is a tie
+	declare int plays = 0
+	
+	//game loop
+	while (over == false)
+	
+		//boolean values to allow players to re-input values, if they were rejected by validation, without losing turn
+		declare bool p1 = false
+		declare bool p2 = false
+	
+		//step 1: display the contents of array/game board
+		for row = 0 to ROWS - 1
+			for col = 0 to COLS -1
+				display ticTacToe[row][col]
+			end for
+		end for
+		
+		//step 2: player 1 inputs
+		while (p1 == false)
+			display "Enter the coordinates on the board you wish to play an X on(row, column)"
+			input row
+			input col
+			
+			if (ticTacToe[row][col] == "*")
+				set ticTacToe[row][col] = "X"
+				set p1 = true
+				set plays = plays + 1
+			else
+				display "Space has already been played. Please choose another coordinate."
+			end if
+		end while
+		
+		//only way I could think of handling a tie. 9 is the max turns in ticTacToe, and the 9th turn is made by p1
+		//would get stuck in an inescapable while loop in p2 because there would be no playable spots, or 
+		//would have to make p2 move just to say it's invalid and end the game anyway.
+		if (plays == 9)
+			set over = true
+			display "A tie has occured."
+			break
+		
+		//step 3: player 2 inputs
+		while (p2 == false)
+			display "Enter the coordinates on the board you wish to play an O on(row, column)"
+			input row
+			input col
+			
+			if (ticTacToe[row][col] == "*")
+				set ticTacToe[row][col] = "O"
+				set p2 = true
+				set plays = plays + 1
+			else
+				display "Space has already been played. Please choose another coordinate."
+			end if
+		end while
+		
+		//step 4: winner
+		if (ticTacToe[0][0] == "X" AND ticTacToe[0][1] == "X" AND ticTacToe[0][2] == "X")
+			set over = true
+			display "Player 1 has Won!"
+		else if (ticTacToe[1][0] == "X" AND ticTacToe[1][1] == "X" AND ticTacToe[1][2] == "X")
+			set over = true
+			display "Player 1 has Won!"
+		else if (ticTacToe[2][0] == "X" AND ticTacToe[2][1] == "X" AND ticTacToe[2][2] == "X")
+			set over = true
+			display "Player 1 has Won!"
+		else if (ticTacToe[0][0] == "X" AND ticTacToe[1][0] == "X" AND ticTacToe[2][0] == "X")
+			set over = true
+			display "Player 1 has Won!"
+		else if (ticTacToe[0][1] == "X" AND ticTacToe[1][1] == "X" AND ticTacToe[2][1] == "X")
+			set over = true
+			display "Player 1 has Won!"
+		else if (ticTacToe[0][2] == "X" AND ticTacToe[1][2] == "X" AND ticTacToe[2][2] == "X")
+			set over = true
+			display "Player 1 has Won!"
+		else if (ticTacToe[0][0] == "X" AND ticTacToe[1][1] == "X" AND ticTacToe[2][2] == "X")
+			set over = true
+			display "Player 1 has Won!"
+		else if (ticTacToe[0][2] == "X" AND ticTacToe[1][1] == "X" AND ticTacToe[2][0] == "X")
+			set over = true
+			display "Player 1 has Won!"
+		else if (ticTacToe[0][0] == "O" AND ticTacToe[0][1] == "O" AND ticTacToe[0][2] == "O")
+			set over = true
+			display "Player 2 has Won!"
+		else if (ticTacToe[1][0] == "O" AND ticTacToe[1][1] == "O" AND ticTacToe[1][2] == "O")
+			set over = true
+			display "Player 2 has Won!"
+		else if (ticTacToe[2][0] == "O" AND ticTacToe[2][1] == "O" AND ticTacToe[2][2] == "O")
+			set over = true
+			display "Player 2 has Won!"
+		else if (ticTacToe[0][0] == "O" AND ticTacToe[1][0] == "O" AND ticTacToe[2][0] == "O")
+			set over = true
+			display "Player 2 has Won!"
+		else if (ticTacToe[0][1] == "O" AND ticTacToe[1][1] == "O" AND ticTacToe[2][1] == "O")
+			set over = true
+			display "Player 2 has Won!"
+		else if (ticTacToe[0][2] == "O" AND ticTacToe[1][2] == "O" AND ticTacToe[2][2] == "O")
+			set over = true
+			display "Player 2 has Won!"
+		else if (ticTacToe[0][0] == "O" AND ticTacToe[1][1] == "O" AND ticTacToe[2][2] == "O")
+			set over = true
+			display "Player 2 has Won!"
+		else if (ticTacToe[0][2] == "O" AND ticTacToe[1][1] == "O" AND ticTacToe[2][0] == "O")
+			set over = true
+			display "Player 2 has Won!"
+	end while
+end module
+
+//create main
+module main()
+	//declare constants and array
+	declare constant int ROWS = 3, COLS = 3
+	declare string ticTacToe[ROWS][COLS] = "*", "*", "*", "*", "*", "*", "*", "*", "*"
+	
+	call game(ref ticTacToe, ref ROWS, ref COLS)
+end module
