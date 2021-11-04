@@ -1,1 +1,2 @@
 C:\Users\Drake-PC\source\repos\exam2Practical\Debug\exam2Practical.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\C++\exam2Practical\Debug\exam2Practical.exe
