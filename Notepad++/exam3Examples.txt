@@ -1,0 +1,106 @@
+// Chapter 10 #8
+
+module addSalesRcord()
+	declare int idNum
+	declare float saleAmount
+	
+	//open file
+	declare OutputFile salesFile
+	open salesFile "sales_report.txt"
+	
+	//process file
+	display "Enter Salesperson ID: "
+	input idNum
+	
+	display "Enter the saleAmount: "
+	input saleAmount
+	
+	//write to the file
+	write salesFile idNum, saleAmount
+	
+	//close file
+	close salesFile
+end module
+
+module display salesReport()
+	declare int idNum
+	declare float saleAmount
+	declare float empTotal = 0.0
+	declare float grandTotal = 0.0
+	declare bool prev = false
+	declare int prevID
+	
+	//open file
+	//to write, change inputfile to output file
+	declare inputFile salesFile
+	open salesFile "sales_report.txt"
+	
+	display "ID		Sale Amount"
+	display "=================="
+	
+	//process file
+	while (!eof(salesFile))
+		//read record
+		//to write, change read to write
+		read salesFile idNum, saleAmount
+		
+		//display data
+		display idNum + " " + FormatToCurrency(saleAmount)
+		
+		if (!prev) then
+			set prevID = idNum
+			set prev = true
+		end if
+		
+		//Control Break LOGIC
+		if (idNum == prevID) then
+			set empTotal += saleAmount
+		else
+			//display previous employees total
+			display "Total sales for employee id # " + prevID + ": " + FormatToCurrency(empTotal)
+			
+			//update totals
+			set grandTotal += empTotal
+			set empTotal = saleAmount
+			set prevID = idNum
+		end if
+	end while
+	
+	//display grand total
+	display "Total of all sales: " + FormatToCurrency(grandTotal)
+	
+	//close file
+	close salesFile
+end module
+
+module main()
+	declare int choice
+	declare bool finished = false
+	
+	do
+		display "Please enter the number representing your choice."
+		display "1 - Display Sales Report"
+		display "2 - Add New Sales Record"
+		display "0 - Quit"
+		
+		input choice
+		
+		switch (choice)
+			case 1
+				call displaySalesReport()
+				break
+			case 2
+				call addSalesRcord()
+				break
+			case 0
+				set finished = true
+				break
+			default
+				display "Please enter a valid number."
+				break
+	end do
+	while(!finished) end do while
+	
+	display "Thank you for using this program!"
+	display "Have a wonderful day!"
+end module

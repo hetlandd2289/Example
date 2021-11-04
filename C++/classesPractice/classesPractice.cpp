@@ -4,18 +4,32 @@
 #include <iostream>
 #include "goblin_class.h"
 #include "dice.h"
+#include <Windows.h>
 
 using namespace std;
 
 //prototypes
 Goblin newGoblin();
+void setCursor(HANDLE&, COORD&, int, int);
 
 int main()
 {
-    Goblin goblin = newGoblin();
-    Goblin sraukk("Sraukk, Goblin Beast of the West", 7, 3, 2);
+    //Goblin goblin = newGoblin();
+    Goblin  goblin, sraukk("Sraukk, Goblin Beast of the West", 7, 3, 2);
     Die d4(4), d6, d8(8);
     string uInput;
+
+
+    HANDLE screen = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    COORD position;
+
+
+    position.X = 15;
+    position.Y = 3;
+
+    //Set cursor to starting position
+    SetConsoleCursorPosition(screen, position);
 
     cout << "Name: " << goblin.getName()
         << "\nHP: " << goblin.getHP()
@@ -36,6 +50,11 @@ int main()
     cout << "\nRoll d4: " << d4.roll()
         << "\nRoll d6: " << d6.roll()
         << "\nRoll d8: " << d8.roll();
+}
+
+//ask
+void setCursor(HANDLE& screen, COORD& pos, int x, int y) {
+    
 }
 
 Goblin newGoblin()
