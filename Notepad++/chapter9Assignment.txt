@@ -1,0 +1,139 @@
+// Auth: Drake Hetland
+// Date: 10/26/2021
+// Desc: Application with an array of 20 integers, 3 methods of sorting, and a binary search
+
+//Swap Module
+module swap(ref int array[], ref int index, ref int next)
+	//Temp variable to hold first number being replaced
+	declare int temp = array[next]
+	
+	set array[next] = array[index]
+	set array[index] = temp
+end module
+
+//Bubble Sort Module
+module bubbleSort(ref int array[], ref int size)
+	//Declare Variables
+	declare int maxElement = 0
+	declare int index = 0
+	
+	//Nested for loop for bubbling array along
+	for (maxElement; maxElement < size - 1; maxElement++)
+		for (index = maxElement; index >= 0; index--)
+			if array[index] > array[index + 1] then
+				call swap(ref array[], ref index, ref index+1)
+			end if
+		end for
+	end for
+end module
+
+//Selection Sort Module
+module selectionSort(ref int array[], ref int size)
+	//Declare variables
+	declare int index
+	declare int minIndex
+	declare int currentIndex
+	
+	//Start iterating
+	for (currentIndex = 0; currentIndex <= size - 2; currentIndex++)
+		set minIndex = currentIndex
+		for (index = currentIndex; index <= size - 1; index++) then
+			if array[index] < array[minIndex]
+				set minIndex = index
+			end if
+		end for
+		if (currentIndex != minIndex) then
+			call swap(ref array[], ref currentIndex, ref minIndex)
+		end if
+	end for
+end module
+
+//Insertion Sort Module
+module insertionSort(ref int array[], ref int size)
+	//Declare variables
+	declare int index
+	declare int scan
+	declare int unsortedValue
+	
+	//Start sorting 
+	for (index = 1; index < size; index++)
+		set unsortedValue = array[index]
+		set scan = index
+		
+		while (scan > 0 AND array[scan - 1] > unsortedValue)
+			set array[scan] = array[scan - 1]
+			set scan--
+		end while
+		
+		set array[scan] = unsortedValue
+	end for
+end module
+
+//Binary Search Function
+function int binarySearch(ref int arr[], ref int size, ref int targetValue)
+	//Declare variables
+	declare int first = 0
+	declare int last = size - 1
+	declare int middle
+	declare int targetIndex = -1
+	declare bool found = false
+
+	//While loop for searching array
+	while (!found) AND (first <= last)
+		set middle = (first + last) / 2
+		
+		if (arr[middle] < targetValue)
+			set first = middle + 1
+		else if (arr[middle] > targetValue)
+			set last = middle - 1
+		else
+			set found = true
+			set targetIndex = middle
+		end if
+	end while
+	
+	return targetIndex
+end module
+
+//Main module
+module main()
+	//Variables for array
+	declare constant int SIZE = 20
+	
+	//Didn't figure it made sense for the user to search an array for a number they input, so array comes initialized.
+	declare int array[SIZE] = 8, 1, 12, 6, 2, 3, 8, 24, 23, 0, 11, 16, 21, 10, 20, 19, 22, 29, 4, 7
+	
+	//Variable to hold search integer
+	declare int targetValue = 0
+	
+	//Variable to hold user's choice of sorting
+	declare int choice = -1
+	
+	//Menu
+	display "1 - Bubble Sort"
+	display "2 - Selection Sort"
+	display "3 - Insertion Sort"
+	
+	input choice
+	
+	//Input validation
+	while (choice > 3 OR choice < 1)
+		display "Please only enter numbers 1 through 3."
+		input choice
+	end while
+	
+	//Decision structure for soring method
+	if (choice == 1)
+		call bubbleSort(ref array, ref SIZE)
+	else if (choice == 2)
+		call selectionSort(ref array, ref SIZE)
+	else if (choice == 3)
+		call insertionSort(ref array, ref SIZE)
+	end if
+	
+	display "Enter a number and the search algorithm will tell you where in the array the number is."
+	input targetValue
+	
+	//Displays the number the user input, as well as the return of the binarySearch function
+	display targetValue + " is located at: " + call binarySearch(ref array, ref SIZE, ref targetValue)
+end module
