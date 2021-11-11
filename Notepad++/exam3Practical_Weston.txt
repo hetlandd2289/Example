@@ -1,0 +1,198 @@
+//preprocessor directive
+IMPORT "SortAndSearchFunctions.txt"
+
+function int getFileSize()
+	declare int size
+	//open file
+	open InputFile inFile "data.txt"
+	
+	//process file
+	while(!eof(inFile))
+		set size++
+	end while
+	
+	//close file
+	close inFile
+	
+	return size
+end function
+
+function int getSize()
+	declare int userSize = 0
+	display "How many values do you want to add?"
+	input userSize
+	
+	return userSize + setFileSize()
+end function
+
+module displayMainMenu()
+	display "Please make a selection:"
+	display "1 - Create/Add Data"
+	display "2 - Display Data Report"
+	display "3 - Sort File Data"
+	display "4 - Search for a Value"
+	display "5 - Save File"
+	display "0 - Quit"
+end module
+
+module newData()
+	declare bool finished = false
+	declare int newValue
+	declare int choice = -1
+	//open file
+	open OutputFile AppendMode outFile "data.txt"
+	
+	//process file
+	while(!finished)
+		display "1 - Enter a new value"
+		display "0 - Back"
+		
+		switch(choice)
+			case 1:
+				display "Enter a value: "
+				input newValue
+				break
+			case 0:
+				set finished = true
+				break
+			default:
+				display "Error: Invalid data entry."
+				break
+	end while
+	
+	//close file
+	close outFile
+end module
+
+module displayDataReport()
+	//open file
+	open InputFile inFile "data.txt"
+	
+	//process file
+	while(!eof(inFile))
+		display read inFile
+	end while
+	
+	//close file
+	close inFile
+end module
+
+function int toArray()
+	declare int arr[getFileSize()]
+	declare int index = 0
+	//open file
+	open InputFile inFile "data.txt"
+	
+	//process file
+	while(!eof(inFile))
+		set arr[index] = read inFile
+	end while
+	
+	//close file
+	close inFile
+	
+	return arr
+end function
+
+module toFile(ref int arr[], ref int size)
+	//open file
+	open outputFile outFile "data.txt"
+	
+	//process file
+	for(int index = 0; index < size; index ++)
+		write outFile arr[index]
+	end for
+	
+	//close file
+	close outFile
+end module
+
+module sortData()
+	declare int choice = -1
+	declare bool finished = false
+	declare int size = getFileSize()
+	declare int arr[size] = toArray()
+	
+	do 
+		display "Select a sorting algorithm"
+		display "1 - Bubble Sort (For Idiots)"
+		display "2 - Selection Sort"
+		display "3 - Insertion Sort
+		display "4 - Back"
+		
+		switch(choice)
+			case 1:
+				bubbleSort(ref arr, ref size)
+				toFile(ref arr, ref size)
+				break
+			case 2:
+				selectionSort(ref arr, ref size)
+				toFile(ref arr, ref size)
+				break
+			case 3:
+				insertionSort(ref arr, ref size)
+				toFile(ref arr, ref size)
+				break
+			case 0:
+				set finished = true
+				break
+			default
+				display "Error. Invalid Input."
+				break
+		
+	end do
+	while(!finished)
+end module
+
+module saveData(ref int arr[], ref int size)
+	//open file
+	open outputFile outFile "data.txt"
+	
+	//process file
+	for(int index = 0; index < size; index++)
+		write outfile arr[index]
+	end for
+	
+	//close file
+	close outFile
+end module
+
+module main()
+	//declare variables
+	declare int size = getFileSize()
+	declare int arr[size] = 
+	declare int choice = -1
+	declare bool finished = false
+	
+	//start loop
+	do
+		call displayMainMenu()
+		input choice
+		
+		switch(choice)
+			case 1:
+				call newData()
+				break
+			case 2:
+				call displayDataReport()
+				break
+			case 3:
+				call sortData()
+				break
+			case 4:
+				call searchData()
+				break
+			case 5:
+				call saveData(ref arr, ref size)
+				break
+			case 0:
+				set finished = true
+				break
+			default:
+				display "Please enter a valid option."
+				break
+	end do
+	while(!finished)
+	
+	display "Thank you for using this program."
+end module

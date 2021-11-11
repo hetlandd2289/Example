@@ -1,10 +1,334 @@
-// Auth: Drake Hetland
-// Date: 11/9/2021
-// Desc: Exam covering topics form chapters 9-12
+//Auth: Drake Hetland
+//Date: 11/9/2021
+//Desc: Exam assessing topics form chapters 9-12
 
+//I left many names vague, as there was not a given theme to go with. Instead focused on modularity, so when given an application, names could be specified then.
 
+module newData()
+	declare int uInput = 0
+	declare int loops = 0
+	declare int counter = 0
+	
+	//instructions
+	display "This function allows you to write and save numbers to a file that can be used and accessed later."
+	
+	//Get number of necessary loops
+	display "Enter the amount of times you would like to write to the file: "
+	input loops
+	
+	while(loops < 1)
+		display "Invalid input. Please enter a number greater than 1."
+		input loops
+	end while
+	
+	//open file
+	declare OutputFile appendMode uFile
+	open uFile "user_file.txt"
+	
+	//loops the user specified amount of times
+	for counter = 1 to loops
+		//process file
+		display "Enter the number you wish to write to the file: "
+		input uInput
+		
+		//write to file
+		write uFile uInput
+	end for
+	
+	//close file
+	close uFile
+end module
+
+module loadFile(ref int arr[], ref int size)
+	declare int index = 0
+	
+	//open file
+	declare inputFile uFile
+	open uFile "user_file.txt"
+	
+	//manipulate file
+	while(index <= size - 1) AND (NOT eof(uFile))
+		write uFile arr[index]
+		set index = index + 1
+	end while
+	
+	//close file
+	close uFile
+end module
+
+module swap(ref int array[], ref int index, ref int next)
+	declare int temp = array[next]
+	
+	set array[next] = array[index]
+	set array[index] = temp
+end module
+
+module bubbleSort(ref int array[], ref int size)
+	declare int maxElement = 0
+	declare int index = 0
+	
+	for (maxElement; maxElement < size - 1; maxElement++)
+		for (index = maxElement; index >= 0; index--)
+			if array[index] > array[index + 1] then
+				call swap(ref array[], ref index, ref index+1)
+			end if
+		end for
+	end for
+end module
+
+module insertionSort(ref int array[], ref int size)
+	//declare variables
+	declare int index
+	declare int scan
+	declare int unsortedValue
+	
+	//start sorting 
+	for (index = 1; index < size; index++)
+		set unsortedValue = array[index]
+		set scan = index
+		
+		while (scan > 0 AND array[scan - 1] > unsortedValue)
+			set array[scan] = array[scan - 1]
+			set scan--
+		end while
+		
+		set array[scan] = unsortedValue
+	end for
+end module
+
+module selectionSort(ref int array[], ref int size)
+	//declare variables
+	declare int index
+	declare int minIndex
+	declare int currentIndex
+	
+	//start iterating
+	for (currentIndex = 0; currentIndex <= size - 2; currentIndex++)
+		set minIndex = currentIndex
+		for (index = currentIndex; index <= size - 1; index++) then
+			if array[index] < array[minIndex]
+				set minIndex = index
+			end if
+		end for
+		if (currentIndex != minIndex) then
+			call swap(ref array[], ref currentIndex, ref minIndex)
+		end if
+	end for
+end module
+
+function seqSearch(ref int arr[], ref int size, ref int targetValue)
+	declare bool found = false
+	declare int index = 0
+	
+	while(found == false AND index <= size - 1)
+		if arr[index] == targetValue
+			set found = true
+		else
+			set index = index + 1
+		end if
+	end while
+	return index
+end function
+
+function binarySearch(ref int arr[], ref int size, ref int targetValue)
+	//declare variables
+	declare int first = 0
+	declare int last = size - 1
+	declare int middle
+	declare int targetIndex = -1
+	declare bool found = false
+
+	while (!found) AND (first <= last)
+		set middle = (first + last) / 2
+		
+		if (arr[middle] < targetValue)
+			set first = middle + 1
+		else if (arr[index] > targetValue)
+			set last = middle - 1
+		else
+			set found = true
+			set targetIndex = middle
+		end if
+	end while
+	
+	return targetIndex
+end function
+
+module save(ref int arr[], ref int size)
+	declare int index = 0
+	
+	//open file
+	declare outputFile numberFile
+	open numberFile "array_values.txt"
+	 
+	//manipulate
+	for(index = 0 to size - 1)
+		write numberFile arr[index]
+	end for
+	
+	//close
+	close numberFile
+end module
 
 //create main module
-Module main()
+module main()
+	//give context and instructions
+	display "This is a multi use program that can be used to: load and save data to and from an array,"
+	display "sort and search an array in multiple ways, and create new data, all based on the user's input."
+	
+	display "Before going any further, we need to get the specifics of the array."
+	
+	//created and initialized array in main so it could be passed more easily to other modules that need it
+	declare int size = 1
+	display "Enter how many numbers the array is to store: "
+	input size
+	
+	//array size input validation
+	while(size < 0)
+		display "Invalid input. Please enter a number larger than 0."
+		input size
+	end while
+	
+	//initalize array to 0
+	declare int array[size] = 0
+	
+	//variable for menu
 	declare int choice = -1
-End module
+	
+	//opted for bool so I could use 0 as a consistent quit/back option in all menus
+	declare bool finished = false
+	
+	//sorted bool to keep users from searcing without sorting first
+	declare bool sorted = false
+	
+	//menu loop
+	do
+		//main menu display
+		display "1 - Create/Add New Data"
+		display "2 - Load Data From File Into Array"
+		display "3 - Sort Array"
+		display "4 - Search Array"
+		display "5 - Save Array To File"
+		display "0 - Quit"
+		
+		input choice
+		
+		//general input validation
+		while(choice < 0 OR choice > 5)
+			display "Invalid input. Please only enter numbers 0 through 5"
+			input choice
+		end while
+		
+		//switch containing sub-menus and calls
+		switch(choice)
+			case 1:
+				call newData()
+				break
+			case 2:
+				call loadFile(ref array, ref size)
+				break
+			case 3:
+				//sub-menu for sort options
+				display "1 - Bubble Sort"
+				display "2 - Insertion Sort"
+				display "3 - Selection Sort"
+				display "0 - Back"
+				
+				input choice
+				
+				//input validation for sort
+				while(choice < 0 OR choice > 3)
+					display "Invalid input. Please only enter numbers 1 through 4"
+					input choice
+				end while
+				
+				//nested switch for sort
+				switch(choice)
+					case 1:
+						call bubbleSort(ref array, ref size)
+						break
+					case 2:
+						call insertionSort(ref array, ref size)
+						break
+					case 3:
+						call selectionSort(ref array, ref size)
+						break
+					case 0:
+						break
+					default: 
+						break
+				set sorted = true
+				//display to let the user know that the array was sorted
+				display "Array sorted."
+				break
+			case 4:
+				//requires the array to be sorted before searching
+				if(sorted == false)
+					display "Error. The array must be soreted before searching for a value."
+				else
+					//variable to hold search value
+					declare int searchValue = 0
+					
+					display "Enter the number you wish to search for."
+					display "If it is contained within the array, the function will return its location."
+					input searchValue
+					
+					//sub-menu for search options
+					display "1 - Sequential Search"
+					display "2 - Binary Search"
+					display "0 - Back"
+					
+					input choice
+					
+					//input validation for search
+					while(choice < 0 OR choice > 2)
+						display "Invalid input. Please only enter numbers 0 through 2"
+						input choice
+					end while
+					
+					//nested switch for search options
+					switch(choice)
+						case 1:
+							display searchValue " is at position " call seqSearch(ref array, ref size, ref targetValue) " in the array."
+						case 2:
+							display searchValue " is at position " call binSearch(ref array, ref size, ref targetValue) " in the array."
+						case 0:
+							break
+						default:
+							break
+				end if
+				break
+			case 5:
+				if(sorted = false)
+					display "It is recommended that the array be sorted before saving."
+					display "1 - Continue Anyway"
+					display "0 - Back"
+					
+					input choice
+					
+					while(choice < 0 OR choice > 1)
+						display "Please only enter a 1 or 0."
+						input choice
+					end while
+					
+					switch(choice)
+						case 1:
+							call save(ref array, ref size)
+							break
+						case 0:
+							break
+						default:
+							break
+				else			
+					call save(ref array, ref size)
+				end if
+				break
+			case 0:
+				set finished = true
+				display "Thank you for using the program."
+				break
+			default:
+				display "An error occured. Please try again."
+				break
+	while(finished == false) end do while
+end module
