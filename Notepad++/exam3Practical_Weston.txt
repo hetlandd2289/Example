@@ -118,7 +118,7 @@ module sortData()
 		display "1 - Bubble Sort (For Idiots)"
 		display "2 - Selection Sort"
 		display "3 - Insertion Sort
-		display "4 - Back"
+		display "0 - Back"
 		
 		switch(choice)
 			case 1:
@@ -132,6 +132,63 @@ module sortData()
 			case 3:
 				insertionSort(ref arr, ref size)
 				toFile(ref arr, ref size)
+				break
+			case 0:
+				set finished = true
+				break
+			default
+				display "Error. Invalid Input."
+				break
+		
+	end do
+	while(!finished)
+end module
+	
+module getTarget(out int target)
+	do
+		display "Please enter a search value: "
+		input target
+	end do
+	while(target == NULL OR !isdigit(target))
+end module	
+	
+module searchData()
+	declare int choice = -1
+	declare bool finished = false
+	declare int size = getFileSize()
+	declare int arr[size] = toArray()
+	
+	declare int target
+	call getTarget(out target)
+	declare int index
+	
+	do 
+		display "Select a searching algorithm"
+		display "1 - Sequential Search"
+		display "2 - binary Search"
+		display "0 - Back"
+		
+		switch(choice)
+			case 1:
+				for int i = 0; i < size; i++)
+					if(arr[i] == target)
+						index = i
+					end if
+				end for
+				if(index != -1)
+					display "The value does not exist in the file."
+				else
+					display "The valure is in the file in line " + index + "."
+				end if
+
+				break
+			case 2:
+				index = binarySearch(ref arr, ref size, ref target)
+				if(index == -1)
+					display "The value does not exist in the file."
+				else
+					display "The valure is in the file in line " + index + "."
+				end if
 				break
 			case 0:
 				set finished = true
