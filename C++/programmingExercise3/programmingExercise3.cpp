@@ -4,62 +4,27 @@
     Desc: Indirect sorting via pointers
 */
 
-#include <iostream>
 #include <fstream>
-#include "Person.h"
+#include "Person.cpp"
 using namespace std;
-
-void getPersonData(Person people[])
-{
-    for (int i = 0; i < sizeof(people); i++)
-    {
-        Person p;
-        cout << "\nEnter the name: " << endl;
-        getline(cin, p.name);
-        cout << "\nEnter the age: " << endl;
-        cin >> p.age;
-
-        people[i] = p;
-    }
-}
-
-void getPersonData(Person people[], ifstream& inFile)
-{
-    Person p;
-    string n;
-    int a;
-    int i = 0;
-    while (!inFile.eof())
-    {
-        inFile >> n;
-        inFile >> a;
-
-        p.name = n;
-        p.age = a;
-
-        people[i] = p;
-        i++;
-    }
-}
-
 
 int main()
 {
     const int SIZE = 10;
     // create an array of Persons along with a perellel array of pointers
     Person people[SIZE];
-    Person pPerson[SIZE];
+    Person* pPerson[SIZE];
 
     // get data
-    ifstream infile("people.txt");
-    if (!infile)
+    ifstream inFile("peopledata.txt");
+    if (!inFile)
     {
         cout << "Enter data for ten people as prompted: " << endl;
         getPersonData(people);
     }
     else
     {
-        getPersonData(people, infile);
+        getPersonData(people, inFile);
     }
 
     // Set the parallel array of pointers to point
@@ -67,15 +32,19 @@ int main()
     {
         pPerson[i] = &people[i];
     }
-
-    //sortByPointers(pPerson, people);
+    //sort by pointers ascending
+    sortByPointers(pPerson, people);
     //display array
     cout << "Here is the array: " << endl;
-    //displayPersonData(people);
+    displayPersonData(people);
 
-    //display the array as pointers
-    cout << "Here are the values via pointers: " << endl;
-    //displayIndirectly(pPerson);
+    //display the array by pointers
+    cout << "Here are the values indirectly via pointers: " << endl;
+    displayPersonDataIndirect(pPerson);
+
+    cout << "Press any key to end the program." << endl;
+    cin.get();
+
     return 0;
 }
 
