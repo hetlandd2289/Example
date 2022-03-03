@@ -1,0 +1,20 @@
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\bin\Debug\GuessingGame.exe.config
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\bin\Debug\GuessingGame.exe
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\bin\Debug\GuessingGame.pdb
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\obj\Debug\BlindMansBluff.csprojAssemblyReference.cache
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\obj\Debug\GuessingGame.BlindMansBluff.resources
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\obj\Debug\GuessingGame.Properties.Resources.resources
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\obj\Debug\BlindMansBluff.csproj.GenerateResource.cache
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\obj\Debug\BlindMansBluff.csproj.CoreCompileInputs.cache
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\obj\Debug\GuessingGame.exe
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Fall\Computer Science\Examples\BlindMansBluff\obj\Debug\GuessingGame.pdb
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\bin\Debug\GuessingGame.exe.config
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\bin\Debug\GuessingGame.exe
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\bin\Debug\GuessingGame.pdb
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\obj\Debug\BlindMansBluff.csproj.AssemblyReference.cache
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\obj\Debug\GuessingGame.BlindMansBluff.resources
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\obj\Debug\GuessingGame.Properties.Resources.resources
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\obj\Debug\BlindMansBluff.csproj.GenerateResource.cache
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\obj\Debug\BlindMansBluff.csproj.CoreCompileInputs.cache
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\obj\Debug\GuessingGame.exe
+H:\My Documents\GitHub\Example\BlindMansBluff\BlindMansBluff\obj\Debug\GuessingGame.pdb
