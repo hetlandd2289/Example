@@ -1,0 +1,37 @@
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\BruhnfoDatabase.mdf
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\BruhnfoDatabase_log.ldf
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\ACS_Example_InClass_2022.exe.config
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\ACS_Example_InClass_2022.exe
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\ACS_Example_InClass_2022.pdb
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\GuessingGame.exe
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\RPSGame.exe
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\TicTacToeSimulator.exe
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\GuessingGame.pdb
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\GuessingGame.exe.config
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\RPSGame.pdb
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\RPSGame.exe.config
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\TicTacToeSimulator.pdb
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\TicTacToeSimulator.exe.config
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.csproj.AssemblyReference.cache
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.Bruhtha.resources
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.ExampleForm.resources
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.Properties.Resources.resources
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.csproj.GenerateResource.cache
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.csproj.CoreCompileInputs.cache
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.csproj.CopyComplete
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.exe
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.pdb
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.Login.resources
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\ACS_Example_InClass_2022.exe.manifest
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\ACS_Example_InClass_2022.application
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\Interop.WMPLib.dll
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\bin\Debug\AxInterop.WMPLib.dll
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\Interop.WMPLib.dll
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\AxInterop.WMPLib.dll
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.csproj.ResolveComReference.cache
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.Bruhdia.resources
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.exe.manifest
+H:\My Documents\GitHub\Iowa-Lakes-Community-College\Courses\Spring\CIS-143 Advanced Computer Science\Examples\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.application
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.csproj.AssemblyReference.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\ACS_Example_InClass_2022\obj\Debug\ACS_Example_InClass_2022.pdb

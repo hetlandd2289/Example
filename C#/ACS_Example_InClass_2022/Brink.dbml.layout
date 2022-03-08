@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Brink">
+  <DataContextMoniker Name="/BrinkDataContext" />
+  <nestedChildShapes>
+    <classShape Id="34366054-2bfd-401f-9dca-54fab0254b01" absoluteBounds="1.125, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/BrinkDataContext/Brable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e16189e-1c33-49d2-a2cb-72343d6975ce" absoluteBounds="1.1399999999999997, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

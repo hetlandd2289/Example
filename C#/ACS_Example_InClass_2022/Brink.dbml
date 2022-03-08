@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BruhnfoDatabase" Class="BrinkDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BruhnfoDatabase.mdf;Integrated Security=True" SettingsObjectName="ACS_Example_InClass_2022.Properties.Settings" SettingsPropertyName="BruhnfoDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Brable" Member="Brables">
+    <Type Name="Brable">
+      <Column Name="Brunk" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Bruh" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Mutha" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fatha" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Suga" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Homebois" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
