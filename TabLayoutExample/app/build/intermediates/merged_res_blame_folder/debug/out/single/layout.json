@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_second.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_first.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\fragment_first.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_toolbar.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\fragment_toolbar.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab1.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\fragment_tab1.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\content_main.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab4.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\fragment_tab4.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab2.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\fragment_tab2.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab3.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\TabLayoutExample\\app\\src\\main\\res\\layout\\fragment_tab3.xml"
+    }
+]

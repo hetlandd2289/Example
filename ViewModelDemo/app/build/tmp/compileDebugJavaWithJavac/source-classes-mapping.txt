@@ -1,0 +1,13 @@
+com/example/viewmodeldemo/databinding/MainActivityBinding.java
+ com.example.viewmodeldemo.databinding.MainActivityBinding
+com/example/viewmodeldemo/MainActivity.java
+ com.example.viewmodeldemo.MainActivity
+com/example/viewmodeldemo/ui/main/MainFragment.java
+ com.example.viewmodeldemo.ui.main.MainFragment
+ com.example.viewmodeldemo.ui.main.MainFragment$1
+com/example/viewmodeldemo/BuildConfig.java
+ com.example.viewmodeldemo.BuildConfig
+com/example/viewmodeldemo/databinding/MainFragmentBinding.java
+ com.example.viewmodeldemo.databinding.MainFragmentBinding
+com/example/viewmodeldemo/ui/main/MainViewModel.java
+ com.example.viewmodeldemo.ui.main.MainViewModel

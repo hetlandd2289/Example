@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\ViewModelDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_fragment.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\ViewModelDemo\\app\\src\\main\\res\\layout\\main_fragment.xml"
+    },
+    {
+        "merged": "H:\\My Documents\\GitHub\\Example\\ViewModelDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_activity.xml",
+        "source": "H:\\My Documents\\GitHub\\Example\\ViewModelDemo\\app\\src\\main\\res\\layout\\main_activity.xml"
+    }
+]
