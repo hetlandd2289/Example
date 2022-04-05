@@ -1,0 +1,16 @@
+H:\My Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\Users.mdf
+H:\My Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\Users_log.ldf
+H:\My Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\DatabaseExample.exe.config
+H:\My Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\DatabaseExample.exe
+H:\My Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\DatabaseExample.pdb
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.csproj.AssemblyReference.cache
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.Login.resources
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.Properties.Resources.resources
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.csproj.GenerateResource.cache
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.csproj.CoreCompileInputs.cache
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.exe
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.pdb
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.testForm.resources
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.AdminLandingPage.resources
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.EditUsersForm.resources
+H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.SongsDBForm.resources

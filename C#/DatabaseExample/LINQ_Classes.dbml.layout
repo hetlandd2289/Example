@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LINQ_Classes">
+  <DataContextMoniker Name="/LINQ_ClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5ad9478e-f77c-430a-8242-8fccf595cb4b" absoluteBounds="4.5, 1.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/LINQ_ClassesDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a73e0f0-9e21-4a16-9e48-0aa0d568c739" absoluteBounds="4.515, 2.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14429fa4-6d34-4a51-b16b-2e19445ad00d" absoluteBounds="4.5, 4.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LINQ_ClassesDataContext/Song" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6595a45d-e561-488a-907f-90b3e36f9181" absoluteBounds="4.515, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
