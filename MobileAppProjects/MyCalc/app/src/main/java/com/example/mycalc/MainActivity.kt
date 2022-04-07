@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //links our local variable of displayTV to the buttons?
+        //links our local variable of displayTV to the text view?
         displayTV = findViewById(R.id.displayTV)
 
         //oneBtn = findViewById(R.id.oneBtn)

@@ -15,7 +15,7 @@
         android:layout_height="250dp"
         android:gravity="end|bottom"
         android:padding="10dp"
-        android:text="1234"
+        android:text=""
         android:textSize="48sp" />
 
     <LinearLayout
