@@ -1,0 +1,12 @@
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\bin\Debug\Photos.mdf
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\bin\Debug\Photos_log.ldf
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\bin\Debug\PhotoViewer.exe.config
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\bin\Debug\PhotoViewer.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\bin\Debug\PhotoViewer.pdb
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\obj\Debug\PhotoViewer.csproj.AssemblyReference.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\obj\Debug\PhotoViewer.pictureForm.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\obj\Debug\PhotoViewer.Properties.Resources.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\obj\Debug\PhotoViewer.csproj.GenerateResource.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\obj\Debug\PhotoViewer.csproj.CoreCompileInputs.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\obj\Debug\PhotoViewer.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\PhotoViewer\obj\Debug\PhotoViewer.pdb

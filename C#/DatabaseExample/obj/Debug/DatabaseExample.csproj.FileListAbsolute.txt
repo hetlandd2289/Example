@@ -14,3 +14,19 @@ H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.test
 H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.AdminLandingPage.resources
 H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.EditUsersForm.resources
 H:\My Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.SongsDBForm.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\Users.mdf
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\Users_log.ldf
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\DatabaseExample.exe.config
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\DatabaseExample.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\bin\Debug\DatabaseExample.pdb
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.csproj.AssemblyReference.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.AdminLandingPage.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.EditUsersForm.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.Login.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.Properties.Resources.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.SongsDBForm.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.TestForm.resources
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.csproj.GenerateResource.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.csproj.CoreCompileInputs.cache
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.exe
+C:\Users\Drake-PC\Documents\GitHub\Example\C#\DatabaseExample\obj\Debug\DatabaseExample.pdb
