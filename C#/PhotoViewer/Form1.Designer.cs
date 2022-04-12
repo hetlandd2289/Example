@@ -49,58 +49,64 @@ namespace PhotoViewer
             // 
             // photoListBox
             // 
+            this.photoListBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.photoListBox.FormattingEnabled = true;
             this.photoListBox.ItemHeight = 16;
             this.photoListBox.Location = new System.Drawing.Point(12, 12);
             this.photoListBox.Name = "photoListBox";
-            this.photoListBox.Size = new System.Drawing.Size(208, 84);
-            this.photoListBox.TabIndex = 2;
+            this.photoListBox.Size = new System.Drawing.Size(276, 100);
+            this.photoListBox.TabIndex = 1;
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(12, 116);
+            this.addButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.addButton.Location = new System.Drawing.Point(12, 150);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(133, 38);
-            this.addButton.TabIndex = 3;
+            this.addButton.Size = new System.Drawing.Size(276, 38);
+            this.addButton.TabIndex = 2;
             this.addButton.Text = "Add Photo";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // viewButton
             // 
-            this.viewButton.Location = new System.Drawing.Point(12, 171);
+            this.viewButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.viewButton.Location = new System.Drawing.Point(12, 205);
             this.viewButton.Name = "viewButton";
-            this.viewButton.Size = new System.Drawing.Size(133, 38);
-            this.viewButton.TabIndex = 4;
+            this.viewButton.Size = new System.Drawing.Size(276, 38);
+            this.viewButton.TabIndex = 3;
             this.viewButton.Text = "View Photo";
-            this.viewButton.UseVisualStyleBackColor = true;
+            this.viewButton.UseVisualStyleBackColor = false;
             this.viewButton.Click += new System.EventHandler(this.viewButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(12, 281);
+            this.exitButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.exitButton.Location = new System.Drawing.Point(12, 315);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(133, 38);
+            this.exitButton.Size = new System.Drawing.Size(276, 38);
             this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(12, 226);
+            this.refreshButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.refreshButton.Location = new System.Drawing.Point(12, 260);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(133, 38);
-            this.refreshButton.TabIndex = 6;
+            this.refreshButton.Size = new System.Drawing.Size(276, 38);
+            this.refreshButton.TabIndex = 4;
             this.refreshButton.Text = "Refresh";
-            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.UseVisualStyleBackColor = false;
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // pictureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.ClientSize = new System.Drawing.Size(800, 366);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.viewButton);
