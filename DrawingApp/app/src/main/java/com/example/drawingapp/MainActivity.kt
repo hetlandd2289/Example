@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity()
             drawingView?.onClickRedo()
         }
 
-        val saveIB: ImageButton = findViewById(R.id.saveIB) //I DID THIS MYSELF!!!
+        val saveIB: ImageButton = findViewById(R.id.saveIB)
         saveIB.setOnClickListener{
             if (isReadingStorageGranted())
             {
